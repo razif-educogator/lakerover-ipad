@@ -1,0 +1,571 @@
+{
+  "sourceLanguage" : "ms",
+  "strings" : {
+    "Abaikan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dismiss" } }
+      }
+    },
+    "Aliran sampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sample flow" } }
+      }
+    },
+    "Amaran" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Alerts" } }
+      }
+    },
+    "Anggaran masa operasi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Estimated runtime" } }
+      }
+    },
+    "Arah" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Heading" } }
+      }
+    },
+    "Bahasa" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Language" } }
+      }
+    },
+    "Bahasa Malaysia" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Bahasa Malaysia" } }
+      }
+    },
+    "Bateri" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Battery" } }
+      }
+    },
+    "Bateri utama" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Main battery" } }
+      }
+    },
+    "Belum" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pending" } }
+      }
+    },
+    "Berhenti" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Stop" } }
+      }
+    },
+    "Butiran" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Details" } }
+      }
+    },
+    "Butiran stesen" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Station detail" } }
+      }
+    },
+    "Cadangan tindakan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Recommended action" } }
+      }
+    },
+    "Cari tasik atau misi…" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Search lake or mission…" } }
+      }
+    },
+    "Cuaca tidak tersedia" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Weather unavailable" } }
+      }
+    },
+    "Cuba mod demo (tanpa rover)" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Try demo mode (no rover)" } }
+      }
+    },
+    "Daftar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Register" } }
+      }
+    },
+    "Data" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Data" } }
+      }
+    },
+    "Data & awan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Data & cloud" } }
+      }
+    },
+    "Data & insight" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Data & insight" } }
+      }
+    },
+    "Data langsung" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Live data" } }
+      }
+    },
+    "Data sensor" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sensor data" } }
+      }
+    },
+    "Demo" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Demo" } }
+      }
+    },
+    "Dilangkau" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Skipped" } }
+      }
+    },
+    "Draf" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Draft" } }
+      }
+    },
+    "Eksport CSV" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Export CSV" } }
+      }
+    },
+    "Elektronik" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Electronics" } }
+      }
+    },
+    "Gerak" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Move" } }
+      }
+    },
+    "Halangan dikesan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Obstacle detected" } }
+      }
+    },
+    "Hari ini" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Today" } }
+      }
+    },
+    "Hentikan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Abort" } }
+      }
+    },
+    "Isipadu disampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Volume sampled" } }
+      }
+    },
+    "Jana laporan PDF" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Generate PDF report" } }
+      }
+    },
+    "Jarak dari rover" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Distance from rover" } }
+      }
+    },
+    "Jeda misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pause mission" } }
+      }
+    },
+    "Kamera langsung" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Live camera" } }
+      }
+    },
+    "Kedalaman" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Depth" } }
+      }
+    },
+    "Kekeruhan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Turbidity" } }
+      }
+    },
+    "Kelajuan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Speed" } }
+      }
+    },
+    "Keluar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Exit" } }
+      }
+    },
+    "Keseluruhan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Whole rover" } }
+      }
+    },
+    "Konduktiviti" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Conductivity" } }
+      }
+    },
+    "Kongsi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Share" } }
+      }
+    },
+    "Kritikal" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Critical" } }
+      }
+    },
+    "Langkau" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Skip" } }
+      }
+    },
+    "Lengkap" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Completed" } }
+      }
+    },
+    "Lihat di peta" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Show on map" } }
+      }
+    },
+    "Live" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Live" } }
+      }
+    },
+    "Main demo pensampelan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Play sampling demo" } }
+      }
+    },
+    "Maklumat" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Info" } }
+      }
+    },
+    "Masa" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Time" } }
+      }
+    },
+    "Masukkan ID secara manual" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter ID manually" } }
+      }
+    },
+    "Menunggu" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Waiting" } }
+      }
+    },
+    "Misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Mission" } }
+      }
+    },
+    "Misi & stesen" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Missions & stations" } }
+      }
+    },
+    "Misi baharu" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "New mission" } }
+      }
+    },
+    "Misi ini" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "This mission" } }
+      }
+    },
+    "Mod jimat kuasa" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Power saving mode" } }
+      }
+    },
+    "Mod operasi autonomi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Autonomous mode" } }
+      }
+    },
+    "Model AR" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "AR model" } }
+      }
+    },
+    "Mula" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Start" } }
+      }
+    },
+    "Mula misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Start mission" } }
+      }
+    },
+    "Mula pensampelan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Start sampling" } }
+      }
+    },
+    "Nota pelajar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Student note" } }
+      }
+    },
+    "Notifikasi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Notifications" } }
+      }
+    },
+    "Oksigen terlarut (DO)" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dissolved oxygen (DO)" } }
+      }
+    },
+    "Panel solar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Solar panel" } }
+      }
+    },
+    "Parameter sasaran" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Target parameters" } }
+      }
+    },
+    "Pensampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sampler" } }
+      }
+    },
+    "Penggunaan kuasa" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Power consumption" } }
+      }
+    },
+    "Pengurusan tenaga" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Power management" } }
+      }
+    },
+    "Perhatian" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Attention" } }
+      }
+    },
+    "Peta" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Map" } }
+      }
+    },
+    "Peta haba tasik" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Lake heat map" } }
+      }
+    },
+    "Pilih misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Choose mission" } }
+      }
+    },
+    "Propulsi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Propulsion" } }
+      }
+    },
+    "Pulang ke jeti" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Return to jetty" } }
+      }
+    },
+    "Purata misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Mission average" } }
+      }
+    },
+    "Rekod sampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sample records" } }
+      }
+    },
+    "Rover & sambungan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rover & connection" } }
+      }
+    },
+    "Rover tidak dijumpai" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rover not found" } }
+      }
+    },
+    "Salin" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Copy" } }
+      }
+    },
+    "Sambung misi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Resume mission" } }
+      }
+    },
+    "Sambung semula" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Resume" } }
+      }
+    },
+    "Sambungan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Link" } }
+      }
+    },
+    "Sampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Samples" } }
+      }
+    },
+    "Satelit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Satellite" } }
+      }
+    },
+    "Sedang diproses" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "In progress" } }
+      }
+    },
+    "Selesai" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Done" } }
+      }
+    },
+    "Semak lokasi dan parameter sebelum pensampelan." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check the location and parameters before sampling." } }
+      }
+    },
+    "Semua" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "All" } }
+      }
+    },
+    "Sensor & kalibrasi" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sensors & calibration" } }
+      }
+    },
+    "Seterusnya" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Next" } }
+      }
+    },
+    "Simpan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Store" } }
+      }
+    },
+    "Skala sebenar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Real scale" } }
+      }
+    },
+    "Solar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Solar" } }
+      }
+    },
+    "Status rover" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rover status" } }
+      }
+    },
+    "Stesen" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Station" } }
+      }
+    },
+    "Suhu" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Temperature" } }
+      }
+    },
+    "Tag" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Tag" } }
+      }
+    },
+    "Tag kartrij (RFID / NFC)" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cartridge tag (RFID / NFC)" } }
+      }
+    },
+    "Tenaga" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Power" } }
+      }
+    },
+    "Tenaga solar" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Solar power" } }
+      }
+    },
+    "Tentang" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } }
+      }
+    },
+    "Tetapan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } }
+      }
+    },
+    "Tiba" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Arrive" } }
+      }
+    },
+    "Ulang sampel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Retry sample" } }
+      }
+    },
+    "Batal" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancel" } }
+      }
+    },
+    "Teruskan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Continue" } }
+      }
+    },
+    "Dibatalkan" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancelled" } }
+      }
+    },
+    "Explore · Measure · Protect" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Explore · Measure · Protect" } }
+      }
+    },
+    "Satu lokasi. Satu sampel. Satu impak." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "One location. One sample. One impact." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,28 @@
+{
+  "missions": [
+    {
+      "name": "Misi Pemantauan Tasik Cenderoh (Julai)",
+      "lakeName": "Tasik Cenderoh",
+      "dayOffset": -63,
+      "state": "completed",
+      "routeLengthM": 440,
+      "turbidityThresholdNTU": 15,
+      "stations": [
+        { "index": 0, "name": "Jeti Utama",  "zone": "Jeti",    "latitude": 5.01100, "longitude": 100.97050, "depthM": 2.4 },
+        { "index": 1, "name": "Zon Utara",   "zone": "Utara",   "latitude": 5.01170, "longitude": 100.97080, "depthM": 3.6 },
+        { "index": 2, "name": "Zon Tengah",  "zone": "Tengah",  "latitude": 5.01215, "longitude": 100.97145, "depthM": 4.8 },
+        { "index": 3, "name": "Zon Selatan", "zone": "Selatan", "latitude": 5.01180, "longitude": 100.97220, "depthM": 3.2 },
+        { "index": 4, "name": "Zon Barat",   "zone": "Barat",   "latitude": 5.01105, "longitude": 100.97210, "depthM": 3.9 },
+        { "index": 5, "name": "Zon Timur",   "zone": "Timur",   "latitude": 5.01060, "longitude": 100.97140, "depthM": 2.9 }
+      ],
+      "samples": [
+        { "stationIndex": 0, "minuteOffset": 0,  "turbidityNTU": 8.2,  "temperatureC": 27.9, "pH": 7.5, "dissolvedOxygenMgL": 7.4, "tagID": "C01-A91" },
+        { "stationIndex": 1, "minuteOffset": 12, "turbidityNTU": 10.1, "temperatureC": 28.0, "pH": 7.4, "dissolvedOxygenMgL": 7.1, "tagID": "C02-A92" },
+        { "stationIndex": 2, "minuteOffset": 25, "turbidityNTU": 12.4, "temperatureC": 28.2, "pH": 7.3, "dissolvedOxygenMgL": 6.9, "tagID": "C03-A93" },
+        { "stationIndex": 3, "minuteOffset": 38, "turbidityNTU": 15.4, "temperatureC": 28.6, "pH": 7.0, "dissolvedOxygenMgL": 6.1, "tagID": "C04-A94" },
+        { "stationIndex": 4, "minuteOffset": 51, "turbidityNTU": 12.9, "temperatureC": 28.4, "pH": 7.2, "dissolvedOxygenMgL": 6.6, "tagID": "C05-A95" },
+        { "stationIndex": 5, "minuteOffset": 63, "turbidityNTU": 11.0, "temperatureC": 28.1, "pH": 7.3, "dissolvedOxygenMgL": 6.8, "tagID": "C06-A96" }
+      ]
+    }
+  ]
+}

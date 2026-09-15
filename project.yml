@@ -1,0 +1,81 @@
+name: LakeRover
+
+options:
+  bundleIdPrefix: my.mckk.robotics
+  deploymentTarget:
+    iOS: "18.0"
+  developmentLanguage: ms
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+configs:
+  Debug: debug
+  Release: release
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    CODE_SIGNING_ALLOWED: NO
+    CODE_SIGNING_REQUIRED: NO
+    CODE_SIGN_IDENTITY: ""
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+
+targets:
+  LakeRover:
+    type: application
+    platform: iOS
+    sources:
+      - path: LakeRover
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: my.mckk.robotics.LakeRover
+        PRODUCT_NAME: LakeRover
+        TARGETED_DEVICE_FAMILY: "2"
+        GENERATE_INFOPLIST_FILE: YES
+        CURRENT_PROJECT_VERSION: "1"
+        MARKETING_VERSION: "1.0"
+        DEVELOPMENT_ASSET_PATHS: '"LakeRover/Preview Content"'
+        ENABLE_PREVIEWS: YES
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: LakeBlue
+        INFOPLIST_KEY_CFBundleDisplayName: LakeRover
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleDefault
+        INFOPLIST_KEY_NSCameraUsageDescription: "LakeRover menggunakan kamera untuk memaparkan model rover dalam AR."
+        INFOPLIST_KEY_NFCReaderUsageDescription: "LakeRover membaca tag kartrij sampel melalui NFC."
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+
+  LakeRoverTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: LakeRoverTests
+    dependencies:
+      - target: LakeRover
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: my.mckk.robotics.LakeRoverTests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/LakeRover.app/LakeRover"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  LakeRover:
+    build:
+      targets:
+        LakeRover: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - LakeRoverTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

@@ -1,0 +1,7 @@
+{
+  "byLake": {
+    "Tasik Cenderoh": { "condition": "Cerah", "temperatureC": 31, "symbolName": "sun.max.fill" },
+    "Tasik Raban": { "condition": "Mendung", "temperatureC": 29, "symbolName": "cloud.fill" },
+    "Tasik Bukit Merah": { "condition": "Hujan", "temperatureC": 27, "symbolName": "cloud.rain.fill" }
+  }
+}

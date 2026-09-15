@@ -1,0 +1,41 @@
+{
+  "missions": [
+    {
+      "name": "Misi Pemantauan Tasik Cenderoh",
+      "lakeName": "Tasik Cenderoh",
+      "dayOffset": 0,
+      "state": "planned",
+      "routeLengthM": 440,
+      "turbidityThresholdNTU": 15,
+      "isDemoMission": true,
+      "stations": [
+        { "index": 0, "name": "Jeti Utama",  "zone": "Jeti",    "latitude": 5.01100, "longitude": 100.97050, "depthM": 2.4, "lastTurbidityNTU": 8.2,  "lastDayOffset": -63 },
+        { "index": 1, "name": "Zon Utara",   "zone": "Utara",   "latitude": 5.01170, "longitude": 100.97080, "depthM": 3.6, "lastTurbidityNTU": 10.1, "lastDayOffset": -63 },
+        { "index": 2, "name": "Zon Tengah",  "zone": "Tengah",  "latitude": 5.01215, "longitude": 100.97145, "depthM": 4.8, "lastTurbidityNTU": 12.4, "lastDayOffset": -63 },
+        { "index": 3, "name": "Zon Selatan", "zone": "Selatan", "latitude": 5.01180, "longitude": 100.97220, "depthM": 3.2, "lastTurbidityNTU": 15.4, "lastDayOffset": -63 },
+        { "index": 4, "name": "Zon Barat",   "zone": "Barat",   "latitude": 5.01105, "longitude": 100.97210, "depthM": 3.9, "lastTurbidityNTU": 12.9, "lastDayOffset": -63 },
+        { "index": 5, "name": "Zon Timur",   "zone": "Timur",   "latitude": 5.01060, "longitude": 100.97140, "depthM": 2.9, "lastTurbidityNTU": 11.0, "lastDayOffset": -63 }
+      ]
+    },
+    {
+      "name": "Misi Kualiti Air Tasik Raban",
+      "lakeName": "Tasik Raban",
+      "dayOffset": 6,
+      "state": "planned",
+      "routeLengthM": 3000,
+      "turbidityThresholdNTU": 15,
+      "isDemoMission": false,
+      "autoStations": { "count": 8, "latitude": 4.85400, "longitude": 100.94200, "radiusM": 320 }
+    },
+    {
+      "name": "Misi Sedimen Bukit Merah",
+      "lakeName": "Tasik Bukit Merah",
+      "dayOffset": 13,
+      "state": "draft",
+      "routeLengthM": 2000,
+      "turbidityThresholdNTU": 18,
+      "isDemoMission": false,
+      "autoStations": { "count": 6, "latitude": 5.05600, "longitude": 100.66300, "radiusM": 260 }
+    }
+  ]
+}
