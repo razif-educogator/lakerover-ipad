@@ -14,14 +14,21 @@ struct SamplingTelemetry: Sendable, Equatable {
     var dissolvedOxygenMgL: Double
     var cartridgeID: String
     var estimatedSecondsRemaining: Double
+    /// Mikropartikel: the jar being filled alongside the sensor readings.
+    var mpfJarID: String = ""
+    var mpfFilteredL: Double = 0
+    var mpfTargetL: Double = 5
+    /// The jar tag is only read once the Tag step is reached.
+    var mpfJarTagged: Bool = false
 
+    /// Field sensors only. Mikropartikel has no live value by definition.
     func value(for parameter: Parameter) -> Double {
         switch parameter {
         case .turbidity: turbidityNTU
         case .temperature: temperatureC
         case .pH: pH
         case .dissolvedOxygen: dissolvedOxygenMgL
-        case .conductivity: 0
+        case .conductivity, .microparticles: 0
         }
     }
 }
@@ -60,6 +67,9 @@ struct CompletedSampling: Sendable, Equatable {
     var pH: Double
     var dissolvedOxygenMgL: Double
     var cartridgeID: String
+    /// Mikropartikel jar handed off to the lab. Results arrive separately.
+    var mpfJarID: String
+    var filteredVolumeL: Double
 }
 
 /// One frame of rover state. Everything the UI shows comes from here.

@@ -250,7 +250,8 @@ final class SimulatedRoverClient: RoverClient {
                 volumeL: filledVolume, targetVolumeL: targetVolume,
                 turbidityNTU: readings.turbidity, temperatureC: readings.temperature,
                 pH: readings.pH, dissolvedOxygenMgL: readings.dissolvedOxygen,
-                cartridgeID: station.cartridgeID
+                cartridgeID: station.cartridgeID,
+                mpfJarID: station.mpfJarID, filteredVolumeL: filledVolume
             )
         } else {
             pendingCompletion = CompletedSampling(
@@ -259,7 +260,8 @@ final class SimulatedRoverClient: RoverClient {
                 volumeL: targetVolume, targetVolumeL: targetVolume,
                 turbidityNTU: target.turbidity, temperatureC: target.temperature,
                 pH: target.pH, dissolvedOxygenMgL: target.dissolvedOxygen,
-                cartridgeID: station.cartridgeID
+                cartridgeID: station.cartridgeID,
+                mpfJarID: station.mpfJarID, filteredVolumeL: targetVolume
             )
         }
         advancePastStation()
@@ -415,7 +417,7 @@ final class SimulatedRoverClient: RoverClient {
         let starved = targetIndex == lowFlowStation && phase == .sample
         let flow: Double = phase == .sample ? (starved ? 0.5 : 1.2) : 0
         let sampleProgress = min(1, max(0, (samplingElapsed - elapsedAtStart(of: .sample)) / phaseDuration(.sample)))
-        return SamplingTelemetry(
+        var telemetry = SamplingTelemetry(
             stationIndex: targetIndex,
             phase: phase,
             elapsed: samplingElapsed,
@@ -429,6 +431,12 @@ final class SimulatedRoverClient: RoverClient {
             cartridgeID: station.cartridgeID,
             estimatedSecondsRemaining: max(0, (1 - sampleProgress) * phaseDuration(.sample))
         )
+        // The Mikropartikel jar fills from the same pump run; its tag is read at the Tag step.
+        telemetry.mpfJarID = station.mpfJarID
+        telemetry.mpfFilteredL = filledVolume
+        telemetry.mpfTargetL = targetVolume
+        telemetry.mpfJarTagged = phase >= .tag
+        return telemetry
     }
 }
 

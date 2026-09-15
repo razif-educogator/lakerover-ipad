@@ -87,6 +87,13 @@ final class MissionRuntime {
         sample.temperatureC = completion.temperatureC
         sample.pH = completion.pH
         sample.dissolvedOxygenMgL = completion.dissolvedOxygenMgL
+        attachMicroparticles(
+            to: sample,
+            station: station,
+            jarID: completion.mpfJarID,
+            filteredL: completion.filteredVolumeL,
+            collected: !completion.cancelled
+        )
         sample.station = station
         sample.mission = mission
         context.insert(sample)
@@ -99,6 +106,28 @@ final class MissionRuntime {
         }
         lastSample = sample
         try? context.save()
+    }
+
+    /// Phase one of Mikropartikel: the field half. The jar exists and goes off to the lab;
+    /// the numbers only appear if this station's script says the lab already reported.
+    private func attachMicroparticles(
+        to sample: Sample,
+        station: Station,
+        jarID: String,
+        filteredL: Double,
+        collected: Bool
+    ) {
+        guard collected, station.targetParameters.contains(.microparticles) else {
+            sample.labStatus = .notCollected
+            return
+        }
+        sample.mpfJarID = jarID
+        sample.filteredVolumeL = filteredL
+        sample.labStatus = station.plannedLabStatus
+        if station.plannedLabStatus.hasResult {
+            sample.microplasticsPerL = station.plannedMicroplasticsPerL
+            sample.microfibrePerL = station.plannedMicrofibrePerL
+        }
     }
 
     private func nextSampleCode(in mission: Mission) -> String {
@@ -144,6 +173,13 @@ final class MissionRuntime {
         sample.temperatureC = 28.0 + 0.15 * i
         sample.pH = 7.5 - 0.09 * i
         sample.dissolvedOxygenMgL = 7.4 - 0.22 * i
+        attachMicroparticles(
+            to: sample,
+            station: station,
+            jarID: station.mpfJarID ?? String(format: "J%02d-M07", station.index + 1),
+            filteredL: 5,
+            collected: true
+        )
         sample.station = station
         sample.mission = mission
         context.insert(sample)

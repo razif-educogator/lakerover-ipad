@@ -17,6 +17,10 @@ struct ParameterChecklist: View {
                         Image(systemName: selection.contains(parameter) ? "checkmark.square.fill" : "square")
                             .foregroundStyle(selection.contains(parameter) ? Theme.accent : .secondary)
                         Text(parameter.label)
+                        if parameter.isLabAnalysis {
+                            // No sensor reads this in the field, so say so up front.
+                            StatusPill(text: "analisis makmal", symbol: "flask.fill", tint: Theme.warning)
+                        }
                         Spacer()
                         Text(parameter.unit)
                             .font(.caption)

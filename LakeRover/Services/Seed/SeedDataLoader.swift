@@ -80,6 +80,10 @@ enum SeedDataLoader {
                 if let offset = s.lastDayOffset {
                     station.lastSampleAt = Calendar.current.date(byAdding: .day, value: offset, to: Date())
                 }
+                station.mpfJarID = s.mpfJarID
+                station.plannedLabStatus = s.labStatus.flatMap(LabStatus.init(rawValue:)) ?? .awaiting
+                station.plannedMicroplasticsPerL = s.microplasticsPerL
+                station.plannedMicrofibrePerL = s.microfibrePerL
                 if mission.state == .completed { station.status = .done }
                 return station
             }
@@ -106,6 +110,11 @@ enum SeedDataLoader {
                 sample.temperatureC = s.temperatureC
                 sample.pH = s.pH
                 sample.dissolvedOxygenMgL = s.dissolvedOxygenMgL
+                sample.mpfJarID = s.mpfJarID
+                sample.filteredVolumeL = s.filteredVolumeL
+                sample.labStatus = s.labStatus.flatMap(LabStatus.init(rawValue:)) ?? .notCollected
+                sample.microplasticsPerL = s.microplasticsPerL
+                sample.microfibrePerL = s.microfibrePerL
                 sample.station = station
                 station.completedAt = takenAt
                 return sample
@@ -158,6 +167,11 @@ private struct SeedStation: Decodable {
     var depthM: Double?
     var lastTurbidityNTU: Double?
     var lastDayOffset: Int?
+    // Mikropartikel script for the live demo run.
+    var mpfJarID: String?
+    var labStatus: String?
+    var microplasticsPerL: Double?
+    var microfibrePerL: Double?
 }
 
 private struct SeedAutoStations: Decodable {
@@ -175,4 +189,10 @@ private struct SeedSample: Decodable {
     var pH: Double
     var dissolvedOxygenMgL: Double
     var tagID: String
+    // Mikropartikel: jar plus the lab result, if one came back.
+    var mpfJarID: String?
+    var filteredVolumeL: Double?
+    var labStatus: String?
+    var microplasticsPerL: Double?
+    var microfibrePerL: Double?
 }

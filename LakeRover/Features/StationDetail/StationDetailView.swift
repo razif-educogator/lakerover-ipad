@@ -86,9 +86,14 @@ struct StationDetailView: View {
                 }
                 .cardStyle()
 
-                Text("Isipadu sampel: 5.0 L · Kartrij \(String(format: "C%02d-A91", station.index + 1))")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Isipadu sampel: 5.0 L · Kartrij \(String(format: "C%02d-A91", station.index + 1))")
+                    if selection.contains(.microparticles) {
+                        Text("Balang mikropartikel: \(station.mpfJarID ?? String(format: "J%02d-M07", station.index + 1)) · dihantar ke makmal selepas misi")
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
 
                 if !canSample {
                     Label(reason, systemImage: "info.circle")

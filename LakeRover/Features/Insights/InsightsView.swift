@@ -51,7 +51,7 @@ struct InsightsView: View {
         HStack(alignment: .top) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
-                    ForEach(Parameter.charted) { parameter in
+                    ForEach(Parameter.insightsSelectable) { parameter in
                         Chip(title: parameter.shortLabel, selected: model.parameter == parameter) {
                             model.parameter = parameter
                         }
@@ -82,6 +82,19 @@ struct InsightsView: View {
                 HStack(spacing: 14) {
                     legendDot(color: Theme.accent, label: Localization.t("Misi ini"))
                     legendDot(color: Theme.accent.opacity(0.35), label: Localization.t("Misi lalu"))
+                }
+            }
+            if model.parameter.isLabAnalysis {
+                Label(
+                    Localization.t("Hanya stesen dengan keputusan makmal dipaparkan."),
+                    systemImage: "flask.fill"
+                )
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
+                if let awaiting = model.awaitingLabText(for: mission) {
+                    Label(awaiting, systemImage: "clock")
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(Theme.warning)
                 }
             }
         }
@@ -132,6 +145,11 @@ struct InsightsView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Peta haba tasik").sectionTitle()
                 HeatMapGrid(points: current)
+                if model.parameter.isLabAnalysis, !model.awaitingLab(for: mission).isEmpty {
+                    Text("Corak separa — \(model.awaitingLab(for: mission).count) stesen masih menunggu makmal.")
+                        .font(.caption2)
+                        .foregroundStyle(Theme.warning)
+                }
             }
             .cardStyle()
             .frame(maxWidth: 260)
@@ -140,7 +158,9 @@ struct InsightsView: View {
                 if let text = model.attentionText(for: exceeded, threshold: threshold) {
                     AttentionCard(text: text)
                 }
-                if let text = model.recommendation(for: exceeded, threshold: threshold) {
+                if let text = model.microparticleRecommendation(current: current, mission: mission) {
+                    RecommendationCard(text: text)
+                } else if let text = model.recommendation(for: exceeded, threshold: threshold) {
                     RecommendationCard(text: text)
                 } else {
                     RecommendationCard(

@@ -8,7 +8,7 @@
       "routeLengthM": 440,
       "turbidityThresholdNTU": 15,
       "stations": [
-        { "index": 0, "name": "Jeti Utama", "zone": "Jeti",    "latitude": 4.94420, "longitude": 100.93897, "depthM": 2.4 },
+        { "index": 0, "name": "Jeti Utama", "zone": "Jeti",    "latitude": 4.94444, "longitude": 100.93957, "depthM": 2.4 },
         { "index": 1, "name": "Stesen 2",   "zone": "Utara",   "latitude": 4.94945, "longitude": 100.94356, "depthM": 3.6 },
         { "index": 2, "name": "Stesen 3",   "zone": "Tengah",  "latitude": 4.95772, "longitude": 100.94189, "depthM": 4.8 },
         { "index": 3, "name": "Stesen 4",   "zone": "Selatan", "latitude": 4.95882, "longitude": 100.95189, "depthM": 3.2 },
@@ -16,12 +16,12 @@
         { "index": 5, "name": "Stesen 6",   "zone": "Timur",   "latitude": 4.96207, "longitude": 100.96187, "depthM": 2.9 }
       ],
       "samples": [
-        { "stationIndex": 0, "minuteOffset": 0,  "turbidityNTU": 8.2,  "temperatureC": 27.9, "pH": 7.5, "dissolvedOxygenMgL": 7.4, "tagID": "C01-A91" },
-        { "stationIndex": 1, "minuteOffset": 12, "turbidityNTU": 10.1, "temperatureC": 28.0, "pH": 7.4, "dissolvedOxygenMgL": 7.1, "tagID": "C02-A92" },
-        { "stationIndex": 2, "minuteOffset": 25, "turbidityNTU": 12.4, "temperatureC": 28.2, "pH": 7.3, "dissolvedOxygenMgL": 6.9, "tagID": "C03-A93" },
-        { "stationIndex": 3, "minuteOffset": 38, "turbidityNTU": 15.4, "temperatureC": 28.6, "pH": 7.0, "dissolvedOxygenMgL": 6.1, "tagID": "C04-A94" },
-        { "stationIndex": 4, "minuteOffset": 51, "turbidityNTU": 12.9, "temperatureC": 28.4, "pH": 7.2, "dissolvedOxygenMgL": 6.6, "tagID": "C05-A95" },
-        { "stationIndex": 5, "minuteOffset": 63, "turbidityNTU": 11.0, "temperatureC": 28.1, "pH": 7.3, "dissolvedOxygenMgL": 6.8, "tagID": "C06-A96" }
+        { "stationIndex": 0, "minuteOffset": 0,  "turbidityNTU": 8.2,  "temperatureC": 27.9, "pH": 7.5, "dissolvedOxygenMgL": 7.4, "tagID": "C01-A91", "mpfJarID": "J01-M05", "filteredVolumeL": 5.0, "labStatus": "done", "microplasticsPerL": 118, "microfibrePerL": 205 },
+        { "stationIndex": 1, "minuteOffset": 12, "turbidityNTU": 10.1, "temperatureC": 28.0, "pH": 7.4, "dissolvedOxygenMgL": 7.1, "tagID": "C02-A92", "mpfJarID": "J02-M05", "filteredVolumeL": 4.9, "labStatus": "done", "microplasticsPerL": 163, "microfibrePerL": 274 },
+        { "stationIndex": 2, "minuteOffset": 25, "turbidityNTU": 12.4, "temperatureC": 28.2, "pH": 7.3, "dissolvedOxygenMgL": 6.9, "tagID": "C03-A93", "mpfJarID": "J03-M05", "filteredVolumeL": 5.1, "labStatus": "done", "microplasticsPerL": 231, "microfibrePerL": 389 },
+        { "stationIndex": 3, "minuteOffset": 38, "turbidityNTU": 15.4, "temperatureC": 28.6, "pH": 7.0, "dissolvedOxygenMgL": 6.1, "tagID": "C04-A94", "mpfJarID": "J04-M05", "filteredVolumeL": 5.0, "labStatus": "done", "microplasticsPerL": 327, "microfibrePerL": 562 },
+        { "stationIndex": 4, "minuteOffset": 51, "turbidityNTU": 12.9, "temperatureC": 28.4, "pH": 7.2, "dissolvedOxygenMgL": 6.6, "tagID": "C05-A95", "mpfJarID": "J05-M05", "filteredVolumeL": 4.8, "labStatus": "done", "microplasticsPerL": 254, "microfibrePerL": 402 },
+        { "stationIndex": 5, "minuteOffset": 63, "turbidityNTU": 11.0, "temperatureC": 28.1, "pH": 7.3, "dissolvedOxygenMgL": 6.8, "tagID": "C06-A96", "mpfJarID": "J06-M05", "filteredVolumeL": 5.0, "labStatus": "done", "microplasticsPerL": 176, "microfibrePerL": 298 }
       ]
     }
   ]

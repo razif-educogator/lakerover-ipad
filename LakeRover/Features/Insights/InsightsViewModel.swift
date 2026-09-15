@@ -87,6 +87,49 @@ final class InsightsViewModel {
         return points.filter { $0.value > threshold }
     }
 
+    // MARK: Mikropartikel
+
+    /// Stations whose jar has been collected but has no lab result yet. These are *absent*
+    /// from the chart rather than plotted as zero, so they are named instead.
+    func awaitingLab(for mission: Mission?) -> [Station] {
+        guard let mission, parameter.isLabAnalysis else { return [] }
+        return mission.orderedStations.filter { station in
+            let samples = mission.orderedSamples.filter { $0.station?.id == station.id }
+            guard let latest = samples.last else { return false }
+            return latest.labStatus.isCollected && !latest.labStatus.hasResult
+        }
+    }
+
+    func awaitingLabText(for mission: Mission?) -> String? {
+        let stations = awaitingLab(for: mission)
+        guard !stations.isEmpty else { return nil }
+        let codes = stations.map(\.shortCode).joined(separator: ", ")
+        return String(format: Localization.t("Menunggu makmal: %@"), codes)
+    }
+
+    /// A Mikropartikel-specific next step, since there is no NTU-style threshold to breach.
+    func microparticleRecommendation(current: [StationPoint], mission: Mission?) -> String? {
+        guard parameter.isLabAnalysis else { return nil }
+        let pending = awaitingLab(for: mission)
+        if let worst = highest(current) {
+            if pending.isEmpty {
+                return String(
+                    format: Localization.t("Kepekatan tertinggi di %@ (%@). Kenal pasti sumber sisa plastik di zon itu dan ulang pensampelan selepas hujan."),
+                    worst.name, worst.code
+                )
+            }
+            return String(
+                format: Localization.t("Kepekatan tertinggi setakat ini di %@ (%@). Hantar %d balang yang tinggal ke makmal untuk melengkapkan corak tasik."),
+                worst.name, worst.code, pending.count
+            )
+        }
+        guard !pending.isEmpty else { return nil }
+        return String(
+            format: Localization.t("Semua %d balang mikropartikel masih di makmal. Trend akan terbentuk sebaik keputusan diterima."),
+            pending.count
+        )
+    }
+
     func recommendation(for exceeded: [StationPoint], threshold: Double) -> String? {
         guard let worst = exceeded.max(by: { $0.value < $1.value }) else { return nil }
         return String(

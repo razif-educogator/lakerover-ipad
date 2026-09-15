@@ -33,6 +33,7 @@ struct RouteStation: Sendable, Equatable, Identifiable {
     var basePH: Double
     var baseDOMgL: Double
     var cartridgeID: String
+    var mpfJarID: String
 }
 
 extension RouteStation {
@@ -49,7 +50,8 @@ extension RouteStation {
             baseTemperatureC: 28.4,
             basePH: 7.2,
             baseDOMgL: 6.8,
-            cartridgeID: String(format: "C%02d-A91", station.index + 1)
+            cartridgeID: String(format: "C%02d-A91", station.index + 1),
+            mpfJarID: station.mpfJarID ?? String(format: "J%02d-M07", station.index + 1)
         )
     }
 }

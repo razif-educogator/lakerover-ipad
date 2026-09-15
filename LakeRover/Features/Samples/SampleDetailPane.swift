@@ -45,6 +45,8 @@ struct SampleDetailPane: View {
                 }
                 .cardStyle()
 
+                microparticleSection
+
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Nota pelajar").sectionTitle()
                     TextField(
@@ -80,5 +82,71 @@ struct SampleDetailPane: View {
             .padding(Theme.gutter)
         }
         .background(Theme.screenBackground)
+    }
+
+    /// Phase two of Mikropartikel: the jar, and the lab result once it lands.
+    private var microparticleSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Text("Mikropartikel").sectionTitle()
+                Spacer(minLength: 0)
+                StatusPill(
+                    text: sample.labStatus.shortLabel,
+                    symbol: sample.labStatus.symbol,
+                    tint: sample.labStatus.tint
+                )
+            }
+
+            if sample.labStatus.isCollected {
+                VStack(spacing: 0) {
+                    KeyValueRow("Balang MPF", sample.mpfJarID ?? "—")
+                    Divider()
+                    KeyValueRow(
+                        "Isipadu ditapis",
+                        sample.filteredVolumeL.map { String(format: "%.1f L", $0) } ?? "—"
+                    )
+                }
+
+                if sample.labStatus.hasResult {
+                    Divider()
+                    VStack(spacing: 0) {
+                        KeyValueRow(
+                            "Mikroplastik",
+                            sample.microplasticsPerL.map { String(format: "%.0f partikel/L", $0) } ?? "—"
+                        )
+                        Divider()
+                        KeyValueRow(
+                            "Mikrofiber",
+                            sample.microfibrePerL.map { String(format: "%.0f partikel/L", $0) } ?? "—"
+                        )
+                        Divider()
+                        KeyValueRow(
+                            "Jumlah mikropartikel",
+                            sample.microparticlesPerL.map { String(format: "%.0f partikel/L", $0) } ?? "—",
+                            tint: Theme.accent
+                        )
+                    }
+                } else {
+                    Label(pendingText, systemImage: "clock")
+                        .font(.caption)
+                        .foregroundStyle(Theme.warning)
+                }
+            } else {
+                Text("Mikropartikel tidak dikumpul untuk sampel ini.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .cardStyle()
+    }
+
+    private var pendingText: String {
+        switch sample.labStatus {
+        case .received:
+            Localization.t("Balang diterima makmal — kiraan sedang dijalankan.")
+        default:
+            Localization.t("Balang dihantar ke makmal — keputusan belum diterima.")
+        }
     }
 }

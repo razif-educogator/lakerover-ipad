@@ -1,1548 +1,1528 @@
 {
-  "sourceLanguage" : "ms",
-  "strings" : {
-    "" : {
-
-    },
-    "—" : {
-
-    },
-    "“Dari Tasik ke Data. Dari Data ke Tindakan.”" : {
-
-    },
-    "%@ · %@" : {
-      "localizations" : {
-        "ms" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$@"
+  "sourceLanguage": "ms",
+  "strings": {
+    "": {},
+    "%@ · %@": {
+      "localizations": {
+        "ms": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$@"
           }
         }
       }
     },
-    "%lld" : {
-
-    },
-    "%lld / %lld" : {
-      "localizations" : {
-        "ms" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld / %2$lld"
+    "%lld": {},
+    "%lld / %lld": {
+      "localizations": {
+        "ms": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld / %2$lld"
           }
         }
       }
     },
-    "%lld / %lld stesen selesai" : {
-      "localizations" : {
-        "ms" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld / %2$lld stesen selesai"
+    "%lld / %lld stesen selesai": {
+      "localizations": {
+        "ms": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld / %2$lld stesen selesai"
           }
         }
       }
     },
-    "%lld stesen · %lld sampel" : {
-      "localizations" : {
-        "ms" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld stesen · %2$lld sampel"
+    "%lld stesen · %lld sampel": {
+      "localizations": {
+        "ms": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld stesen · %2$lld sampel"
           }
         }
       }
-    },
-    "%lld%%" : {
-
     },
-    "+ Misi baharu" : {
-
-    },
-    "30 hari" : {
-
-    },
-    "Abaikan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dismiss"
+    "%lld%%": {},
+    "+ Misi baharu": {},
+    "30 hari": {},
+    "Abaikan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dismiss"
           }
         }
       }
     },
-    "Aliran rendah — kartrij mungkin tersumbat" : {
-
-    },
-    "Aliran sampel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sample flow"
+    "Aliran rendah — kartrij mungkin tersumbat": {},
+    "Aliran sampel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sample flow"
           }
         }
       }
     },
-    "Amaran" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerts"
+    "Amaran": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerts"
           }
         }
       }
     },
-    "Anggaran masa operasi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estimated runtime"
+    "Anggaran masa operasi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimated runtime"
           }
         }
       }
     },
-    "Arah" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heading"
+    "Arah": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heading"
           }
         }
       }
     },
-    "Bahasa" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
+    "Bahasa": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
           }
         }
       }
     },
-    "Bahasa Malaysia" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bahasa Malaysia"
+    "Bahasa Malaysia": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bahasa Malaysia"
           }
         }
       }
     },
-    "Batal" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancel"
+    "Balang %@ ditag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jar %@ tagged"
           }
         }
       }
     },
-    "Bateri" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Battery"
+    "Balang MPF": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MPF jar"
           }
         }
       }
     },
-    "Bateri di bawah %d%%" : {
-
-    },
-    "Bateri utama" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Main battery"
+    "Balang dihantar ke makmal — keputusan belum diterima.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jar sent to the lab — no result yet."
           }
         }
       }
     },
-    "Belum" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pending"
+    "Balang diterima makmal — kiraan sedang dijalankan.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jar received by the lab — counting under way."
           }
         }
       }
-    },
-    "Belum ada data" : {
-
     },
-    "Berhenti" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stop"
+    "Batal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
           }
         }
       }
     },
-    "Berhenti kecemasan aktif — rover menahan kedudukan." : {
-
-    },
-    "Butiran" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Details"
+    "Bateri": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery"
           }
         }
       }
-    },
-    "Butiran misi" : {
-
     },
-    "Butiran stesen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Station detail"
+    "Bateri di bawah %d%%": {},
+    "Bateri utama": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Main battery"
           }
         }
       }
     },
-    "Cadangan tindakan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommended action"
+    "Belum": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pending"
           }
         }
       }
     },
-    "Cari tasik atau misi…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search lake or mission…"
+    "Belum ada data": {},
+    "Berhenti": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop"
           }
         }
       }
     },
-    "Contoh: air agak keruh berhampiran jeti…" : {
-
-    },
-    "Cuaca tidak tersedia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather unavailable"
+    "Berhenti kecemasan aktif — rover menahan kedudukan.": {},
+    "Butiran": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Details"
           }
         }
       }
     },
-    "Cuba mod demo (tanpa rover)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Try demo mode (no rover)"
+    "Butiran misi": {},
+    "Butiran stesen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Station detail"
           }
         }
       }
     },
-    "cukup untuk %lld stesen lagi" : {
-
-    },
-    "Daftar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Register"
+    "Cadangan tindakan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recommended action"
           }
         }
       }
     },
-    "Data" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data"
+    "Cari tasik atau misi…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search lake or mission…"
           }
         }
       }
     },
-    "Data & awan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data & cloud"
+    "Contoh: air agak keruh berhampiran jeti…": {},
+    "Cuaca tidak tersedia": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather unavailable"
           }
         }
       }
     },
-    "Data & insight" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data & insight"
+    "Cuba mod demo (tanpa rover)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try demo mode (no rover)"
           }
         }
       }
-    },
-    "Data disimpan pada peranti ini sahaja." : {
-
     },
-    "Data langsung" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live data"
+    "Daftar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Register"
           }
         }
       }
     },
-    "Data sensor" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sensor data"
+    "Data": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
           }
         }
       }
     },
-    "Demo" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo"
+    "Data & awan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data & cloud"
           }
         }
       }
     },
-    "Dibatalkan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelled"
+    "Data & insight": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data & insight"
           }
         }
       }
     },
-    "Dijeda" : {
-
-    },
-    "Dilangkau" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skipped"
+    "Data disimpan pada peranti ini sahaja.": {},
+    "Data langsung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live data"
           }
         }
       }
-    },
-    "Dimatikan" : {
-
     },
-    "Diproses" : {
-
-    },
-    "Dirancang" : {
-
-    },
-    "Draf" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Draft"
+    "Data sensor": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sensor data"
           }
         }
       }
     },
-    "Eksport CSV" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Export CSV"
+    "Demo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
           }
         }
       }
     },
-    "Elektronik" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Electronics"
+    "Dibatalkan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelled"
           }
         }
       }
     },
-    "Explore · Measure · Protect" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Explore · Measure · Protect"
+    "Dijeda": {},
+    "Dilangkau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skipped"
           }
         }
       }
     },
-    "Gerak" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Move"
+    "Dimatikan": {},
+    "Diproses": {},
+    "Dirancang": {},
+    "Ditapis %.1f / %.1f L": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtered %1$.1f / %2$.1f L"
           }
         }
       }
-    },
-    "Had" : {
-
     },
-    "Had bateri rendah: %lld%%" : {
-
-    },
-    "Had pulang automatik: %lld%%" : {
-
-    },
-    "Halangan dikesan" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obstacle detected"
+    "Diterima": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received"
           }
         }
       }
     },
-    "Hari ini" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Today"
+    "Draf": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draft"
           }
         }
       }
     },
-    "Hentikan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abort"
+    "Eksport CSV": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Export CSV"
           }
         }
       }
     },
-    "ID kartrij" : {
-
-    },
-    "Isipadu" : {
-
-    },
-    "Isipadu disampel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Volume sampled"
+    "Elektronik": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Electronics"
           }
         }
       }
-    },
-    "Isipadu kartrij" : {
-
     },
-    "Isipadu sampel: 5.0 L · Kartrij %@" : {
-
-    },
-    "Jana laporan PDF" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generate PDF report"
+    "Explore · Measure · Protect": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explore · Measure · Protect"
           }
         }
       }
-    },
-    "Jana sesi ini · setiap minit" : {
-
     },
-    "Jarak dari rover" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Distance from rover"
+    "Gerak": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move"
           }
         }
       }
     },
-    "Jarak stesen: %lld m" : {
-
-    },
-    "Jeda misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pause mission"
+    "Had": {},
+    "Had bateri rendah: %lld%%": {},
+    "Had pulang automatik: %lld%%": {},
+    "Halangan dikesan": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obstacle detected"
           }
         }
       }
-    },
-    "Kamera & sensor" : {
-
-    },
-    "Kamera 360° rover menstrim melalui pautan 4G semasa misi sebenar." : {
-
     },
-    "Kamera langsung" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live camera"
+    "Hanya stesen dengan keputusan makmal dipaparkan.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only stations with a lab result are shown."
           }
         }
       }
     },
-    "Kedalaman" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Depth"
+    "Hari ini": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today"
           }
         }
       }
     },
-    "Kedudukan rover" : {
-
-    },
-    "Kekeruhan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Turbidity"
+    "Hentikan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abort"
           }
         }
       }
-    },
-    "Kekeruhan mengikut stesen (%@)" : {
-
     },
-    "Kekeruhan terakhir" : {
-
-    },
-    "Kelajuan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Speed"
+    "ID kartrij": {},
+    "Isipadu": {},
+    "Isipadu disampel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volume sampled"
           }
         }
       }
-    },
-    "Kelajuan demo" : {
-
-    },
-    "Kelajuan simulasi" : {
-
     },
-    "Keluar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exit"
+    "Isipadu ditapis": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtered volume"
           }
         }
       }
     },
-    "Keseluruhan" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Whole rover"
+    "Isipadu kartrij": {},
+    "Isipadu sampel: 5.0 L · Kartrij %@": {},
+    "Jana laporan PDF": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate PDF report"
           }
         }
       }
-    },
-    "Ketik komponen untuk penerangan" : {
-
-    },
-    "Ketik komponen untuk penerangan." : {
-
-    },
-    "Ketik peta untuk menambah stesen. Seret untuk menukar susunan." : {
-
-    },
-    "Ketik tindakan untuk melaksanakannya terus dari senarai." : {
-
-    },
-    "Komunikasi 4G" : {
-
     },
-    "Konduktiviti" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conductivity"
+    "Jana sesi ini · setiap minit": {},
+    "Jarak dari rover": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance from rover"
           }
         }
       }
     },
-    "Kongsi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Share"
+    "Jarak stesen: %lld m": {},
+    "Jeda misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause mission"
           }
         }
       }
     },
-    "Kritikal" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Critical"
+    "Jumlah mikropartikel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total microparticles"
           }
         }
       }
     },
-    "Kritikal sahaja" : {
-
-    },
-    "Kualiti pautan %lld daripada 4" : {
-
-    },
-    "Kurangkan kadar telemetri dan kamera" : {
-
-    },
-    "Lake" : {
-
-    },
-    "LakeRover · MCKK Robotics · laporan dijana secara automatik" : {
-
-    },
-    "LakeRover ialah rover pensampelan air tasik autonomi. Aplikasi ini memantau misi, merekod sampel dan menukar data menjadi tindakan." : {
-
-    },
-    "Langkau" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skip"
+    "Kamera & sensor": {},
+    "Kamera 360° rover menstrim melalui pautan 4G semasa misi sebenar.": {},
+    "Kamera langsung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live camera"
           }
         }
       }
-    },
-    "Langkau stesen ini?" : {
-
     },
-    "Lapisan lalai" : {
-
-    },
-    "Lengkap" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Completed"
+    "Kedalaman": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Depth"
           }
         }
       }
     },
-    "Lihat di peta" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show on map"
+    "Kedudukan rover": {},
+    "Kekeruhan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turbidity"
           }
         }
       }
     },
-    "Live" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live"
+    "Kekeruhan mengikut stesen (%@)": {},
+    "Kekeruhan terakhir": {},
+    "Kelajuan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speed"
           }
         }
       }
     },
-    "Lokasi" : {
-
-    },
-    "Main demo pensampelan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Play sampling demo"
+    "Kelajuan demo": {},
+    "Kelajuan simulasi": {},
+    "Keluar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exit"
           }
         }
       }
     },
-    "Maklumat" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Info"
+    "Keseluruhan": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whole rover"
           }
         }
       }
     },
-    "Masa" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time"
+    "Ketik komponen untuk penerangan": {},
+    "Ketik komponen untuk penerangan.": {},
+    "Ketik peta untuk menambah stesen. Seret untuk menukar susunan.": {},
+    "Ketik tindakan untuk melaksanakannya terus dari senarai.": {},
+    "Komunikasi 4G": {},
+    "Konduktiviti": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conductivity"
           }
         }
       }
     },
-    "Masukkan ID secara manual" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enter ID manually"
+    "Kongsi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
           }
         }
       }
-    },
-    "Mencari rover…" : {
-
     },
-    "Mengecas" : {
-
-    },
-    "Menggunakan" : {
-
-    },
-    "Mengimbas tag kartrij…" : {
-
-    },
-    "Menunggu" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waiting"
+    "Kritikal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Critical"
           }
         }
       }
-    },
-    "Menunggu data solar" : {
-
-    },
-    "Menunggu langkah Tag" : {
-
     },
-    "Menunggu pensampelan bermula." : {
-
-    },
-    "Menunggu telemetri rover." : {
-
-    },
-    "Menyemak pautan tempatan dan 4G" : {
-
-    },
-    "Minit" : {
-
-    },
-    "Misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mission"
+    "Kritikal sahaja": {},
+    "Kualiti pautan %lld daripada 4": {},
+    "Kurangkan kadar telemetri dan kamera": {},
+    "Lake": {},
+    "LakeRover ialah rover pensampelan air tasik autonomi. Aplikasi ini memantau misi, merekod sampel dan menukar data menjadi tindakan.": {},
+    "LakeRover · MCKK Robotics · laporan dijana secara automatik": {},
+    "Langkau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
           }
         }
       }
     },
-    "Misi & stesen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Missions & stations"
+    "Langkau stesen ini?": {},
+    "Lapisan lalai": {},
+    "Lengkap": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completed"
           }
         }
       }
-    },
-    "Misi aktif" : {
-
     },
-    "Misi baharu" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New mission"
+    "Lihat di peta": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show on map"
           }
         }
       }
     },
-    "Misi ini" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This mission"
+    "Live": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live"
           }
         }
       }
     },
-    "Misi lalu" : {
-
-    },
-    "Misi selesai — semua stesen telah disampel." : {
-
-    },
-    "Mod" : {
-
-    },
-    "Mod jimat kuasa" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Power saving mode"
+    "Lokasi": {},
+    "Main demo pensampelan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play sampling demo"
           }
         }
       }
     },
-    "Mod operasi autonomi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autonomous mode"
+    "Maklumat": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Info"
           }
         }
       }
     },
-    "Model AR" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AR model"
+    "Masa": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time"
           }
         }
       }
-    },
-    "Model sementara — gantikan Resources/Rover.reality dengan eksport Reality Composer." : {
-
-    },
-    "Motor pendorong" : {
-
     },
-    "Mula" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
+    "Masukkan ID secara manual": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter ID manually"
           }
         }
       }
     },
-    "Mula (mod demo)" : {
-
-    },
-    "Mula misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start mission"
+    "Mencari rover…": {},
+    "Mengecas": {},
+    "Menggunakan": {},
+    "Mengimbas tag kartrij…": {},
+    "Menunggu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting"
           }
         }
       }
     },
-    "Mula pensampelan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start sampling"
+    "Menunggu data solar": {},
+    "Menunggu keputusan makmal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaiting lab result"
           }
         }
       }
-    },
-    "Nama misi" : {
-
-    },
-    "Nama stesen" : {
-
-    },
-    "Nama tasik" : {
-
-    },
-    "Nilai" : {
-
     },
-    "Nota pelajar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Student note"
+    "Menunggu langkah Tag": {},
+    "Menunggu makmal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaiting lab"
           }
         }
       }
     },
-    "Notifikasi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notifications"
+    "Menunggu makmal: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaiting lab: %@"
           }
         }
       }
     },
-    "Oksigen terlarut (DO)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dissolved oxygen (DO)"
+    "Menunggu pensampelan bermula": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for sampling to start"
           }
         }
       }
     },
-    "Pam pensampelan" : {
-
-    },
-    "Panel solar" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solar panel"
+    "Menunggu pensampelan bermula.": {},
+    "Menunggu telemetri rover.": {},
+    "Menyemak pautan tempatan dan 4G": {},
+    "Mikrofiber": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microfibre"
           }
         }
       }
     },
-    "Parameter sasaran" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Target parameters"
+    "Mikropartikel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microparticles"
           }
         }
       }
-    },
-    "Pasukan" : {
-
-    },
-    "Pautan" : {
-
-    },
-    "Pembaca NFC dimatikan dalam binaan demo; ID kartrij diambil daripada skrip misi." : {
-
-    },
-    "Pembaca NFC tidak tersedia." : {
-
     },
-    "Penggunaan kuasa" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Power consumption"
+    "Mikropartikel tidak dikumpul untuk sampel ini.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No microparticle jar was collected for this sample."
           }
         }
       }
     },
-    "Pengurusan tenaga" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Power management"
+    "Mikroplastik": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microplastics"
           }
         }
       }
     },
-    "Pensampel" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sampler"
+    "Minit": {},
+    "Misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mission"
           }
         }
       }
     },
-    "Pensampelan" : {
-
-    },
-    "Pensampelan hampir selesai" : {
-
-    },
-    "Penyelarasan iCloud akan diaktifkan dalam binaan berikutnya; eksport Drive melalui helaian kongsi." : {
-
-    },
-    "Perhatian" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Attention"
+    "Misi & stesen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Missions & stations"
           }
         }
       }
     },
-    "Peta" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Map"
+    "Misi aktif": {},
+    "Misi baharu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New mission"
           }
         }
       }
     },
-    "Peta haba tasik" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lake heat map"
+    "Misi ini": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This mission"
           }
         }
       }
     },
-    "pH" : {
-
-    },
-    "Pilih misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose mission"
+    "Misi lalu": {},
+    "Misi selesai — semua stesen telah disampel.": {},
+    "Mod": {},
+    "Mod jimat kuasa": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Power saving mode"
           }
         }
       }
     },
-    "Pilih misi dalam tab Misi untuk mula memantau rover." : {
-
-    },
-    "Propulsi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Propulsion"
+    "Mod operasi autonomi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autonomous mode"
           }
         }
       }
-    },
-    "Pulang automatik" : {
-
     },
-    "Pulang ke jeti" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Return to jetty"
+    "Model AR": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AR model"
           }
         }
       }
     },
-    "Pulang ke jeti sekarang?" : {
-
-    },
-    "Purata misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mission average"
+    "Model sementara — gantikan Resources/Rover.reality dengan eksport Reality Composer.": {},
+    "Motor pendorong": {},
+    "Mula": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
           }
         }
       }
-    },
-    "Pusatkan pada rover" : {
-
     },
-    "Rekod sampel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sample records"
+    "Mula (mod demo)": {},
+    "Mula misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start mission"
           }
         }
       }
     },
-    "Rover" : {
-
-    },
-    "Rover & sambungan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rover & connection"
+    "Mula pensampelan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start sampling"
           }
         }
       }
-    },
-    "Rover berjalan dalam parameter normal." : {
-
-    },
-    "Rover meneruskan misi walaupun pautan terputus" : {
-
     },
-    "Rover tidak dijumpai" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rover not found"
+    "Nama misi": {},
+    "Nama stesen": {},
+    "Nama tasik": {},
+    "Nilai": {},
+    "Nota pelajar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Student note"
           }
         }
       }
     },
-    "Salin" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copy"
+    "Notifikasi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications"
           }
         }
       }
     },
-    "Sambung" : {
-
-    },
-    "Sambung misi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resume mission"
+    "Oksigen terlarut (DO)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dissolved oxygen (DO)"
           }
         }
       }
     },
-    "Sambung semula" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resume"
+    "Pam pensampelan": {},
+    "Panel solar": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solar panel"
           }
         }
       }
     },
-    "Sambungan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Link"
+    "Parameter sasaran": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Target parameters"
           }
         }
       }
     },
-    "Sampel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Samples"
+    "Pasukan": {},
+    "Pautan": {},
+    "Pembaca NFC dimatikan dalam binaan demo; ID kartrij diambil daripada skrip misi.": {},
+    "Pembaca NFC tidak tersedia.": {},
+    "Penggunaan kuasa": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Power consumption"
           }
         }
       }
-    },
-    "Sampel akan muncul di sini sebaik sahaja stesen pertama selesai." : {
-
     },
-    "Sampel terakhir" : {
-
-    },
-    "Satelit" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Satellite"
+    "Pengurusan tenaga": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Power management"
           }
         }
       }
     },
-    "Satu lokasi. Satu sampel. Satu impak." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "One location. One sample. One impact."
+    "Pensampel": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sampler"
           }
         }
       }
     },
-    "Sedang berjalan" : {
-
-    },
-    "Sedang diproses" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In progress"
+    "Pensampelan": {},
+    "Pensampelan hampir selesai": {},
+    "Penyelarasan iCloud akan diaktifkan dalam binaan berikutnya; eksport Drive melalui helaian kongsi.": {},
+    "Perhatian": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attention"
           }
         }
       }
-    },
-    "Sedang diproses:" : {
-
     },
-    "Selaras ke iCloud / Drive" : {
-
-    },
-    "Selesai" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Done"
+    "Peta": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
           }
         }
       }
-    },
-    "Selesaikan sekurang-kurangnya satu stesen untuk melihat trend." : {
-
     },
-    "Semak lokasi dan parameter sebelum pensampelan." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check the location and parameters before sampling."
+    "Peta haba tasik": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lake heat map"
           }
         }
       }
     },
-    "Semua" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
+    "Pilih misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose mission"
           }
         }
       }
     },
-    "Semua amaran" : {
-
-    },
-    "Semua stesen dalam had. Teruskan pemantauan dua minggu sekali." : {
-
-    },
-    "Sensor & kalibrasi" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sensors & calibration"
+    "Pilih misi dalam tab Misi untuk mula memantau rover.": {},
+    "Propulsi": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Propulsion"
           }
         }
       }
     },
-    "Seterusnya" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Next"
+    "Pulang automatik": {},
+    "Pulang ke jeti": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Return to jetty"
           }
         }
       }
-    },
-    "Seterusnya:" : {
-
     },
-    "Simpan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Store"
+    "Pulang ke jeti sekarang?": {},
+    "Purata misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mission average"
           }
         }
       }
     },
-    "Simpan sebagai draf" : {
-
-    },
-    "Sistem komputer" : {
-
+    "Pusatkan pada rover": {},
+    "Rekod sampel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sample records"
+          }
+        }
+      }
     },
-    "Skala sebenar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Real scale"
+    "Rover": {},
+    "Rover & sambungan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rover & connection"
           }
         }
       }
     },
-    "Solar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solar"
+    "Rover berjalan dalam parameter normal.": {},
+    "Rover meneruskan misi walaupun pautan terputus": {},
+    "Rover tidak dijumpai": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rover not found"
           }
         }
       }
     },
-    "Standard" : {
-
+    "Salin": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy"
+          }
+        }
+      }
     },
-    "Status rover" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rover status"
+    "Sambung": {},
+    "Sambung misi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume mission"
           }
         }
       }
     },
-    "Stesen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Station"
+    "Sambung semula": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume"
           }
         }
       }
     },
-    "Stesen %@" : {
-
+    "Sambungan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link"
+          }
+        }
+      }
     },
-    "Stesen akan ditanda sebagai dilangkau dan rover terus ke stesen berikutnya." : {
-
+    "Sampel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Samples"
+          }
+        }
+      }
     },
-    "Stesen tertinggi" : {
-
+    "Sampel akan muncul di sini sebaik sahaja stesen pertama selesai.": {},
+    "Sampel terakhir": {},
+    "Satelit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Satellite"
+          }
+        }
+      }
     },
-    "Stesen tidak dijumpai" : {
-
+    "Satu lokasi. Satu sampel. Satu impak.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One location. One sample. One impact."
+          }
+        }
+      }
     },
-    "Stesen yang belum disampel akan ditinggalkan." : {
-
+    "Sedang berjalan": {},
+    "Sedang diproses": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In progress"
+          }
+        }
+      }
     },
-    "Suapan kamera tidak tersedia dalam mod demo" : {
-
+    "Sedang diproses:": {},
+    "Selaras ke iCloud / Drive": {},
+    "Selesai": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        }
+      }
     },
-    "Suhu" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temperature"
+    "Selesaikan sekurang-kurangnya satu stesen untuk melihat trend.": {},
+    "Semak lokasi dan parameter sebelum pensampelan.": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the location and parameters before sampling."
           }
         }
       }
     },
-    "Tag" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tag"
+    "Semua": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
           }
         }
       }
     },
-    "Tag kartrij (RFID / NFC)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cartridge tag (RFID / NFC)"
+    "Semua amaran": {},
+    "Semua stesen dalam had. Teruskan pemantauan dua minggu sekali.": {},
+    "Sensor & kalibrasi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sensors & calibration"
           }
         }
       }
     },
-    "Tag RFID" : {
-
+    "Seterusnya": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
     },
-    "Tahap amaran" : {
-
+    "Seterusnya:": {},
+    "Simpan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Store"
+          }
+        }
+      }
     },
-    "Tamat" : {
-
+    "Simpan sebagai draf": {},
+    "Sistem komputer": {},
+    "Skala sebenar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Real scale"
+          }
+        }
+      }
     },
-    "Tamatkan sesi" : {
-
+    "Solar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solar"
+          }
+        }
+      }
     },
-    "Tarikh" : {
-
+    "Standard": {},
+    "Status rover": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rover status"
+          }
+        }
+      }
     },
-    "Tekan lama untuk mod pameran" : {
-
+    "Stesen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Station"
+          }
+        }
+      }
     },
-    "Tenaga" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Power"
+    "Stesen %@": {},
+    "Stesen akan ditanda sebagai dilangkau dan rover terus ke stesen berikutnya.": {},
+    "Stesen tertinggi": {},
+    "Stesen tidak dijumpai": {},
+    "Stesen yang belum disampel akan ditinggalkan.": {},
+    "Suapan kamera tidak tersedia dalam mod demo": {},
+    "Suhu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temperature"
           }
         }
       }
     },
-    "Tenaga solar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solar power"
+    "Tag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tag"
           }
         }
       }
     },
-    "Tentang" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "About"
+    "Tag RFID": {},
+    "Tag balang belum dibaca": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jar tag not read yet"
           }
         }
       }
     },
-    "Teruskan" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continue"
+    "Tag kartrij (RFID / NFC)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartridge tag (RFID / NFC)"
           }
         }
       }
     },
-    "Teruskan dengan mod demo — rover disimulasikan sepenuhnya." : {
-
+    "Tahap amaran": {},
+    "Tamat": {},
+    "Tamatkan sesi": {},
+    "Tarikh": {},
+    "Tekan lama untuk mod pameran": {},
+    "Tenaga": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Power"
+          }
+        }
+      }
     },
-    "Tetapan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+    "Tenaga solar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solar power"
           }
         }
       }
     },
-    "Tiada amaran" : {
-
+    "Tentang": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        }
+      }
     },
-    "Tiada misi aktif" : {
-
+    "Teruskan": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        }
+      }
     },
-    "Tiada sampel lagi" : {
-
+    "Teruskan dengan mod demo — rover disimulasikan sepenuhnya.": {},
+    "Tetapan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
     },
-    "Tiada telemetri" : {
-
+    "Tiada amaran": {},
+    "Tiada bacaan lapangan — balang dihantar ke makmal untuk kiraan mikroplastik dan mikrofiber.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No field reading — the jar goes to a lab for microplastic and microfibre counts."
+          }
+        }
+      }
     },
-    "Tiba" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arrive"
+    "Tiada misi aktif": {},
+    "Tiada sampel lagi": {},
+    "Tiada telemetri": {},
+    "Tiba": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrive"
           }
         }
       }
     },
-    "Tukar bahasa berkuat kuasa serta-merta, tanpa memulakan semula aplikasi." : {
-
+    "Tidak dikumpul": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not collected"
+          }
+        }
+      }
     },
-    "Tutup" : {
-
+    "Tidak dipilih untuk stesen ini.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not selected for this station."
+          }
+        }
+      }
     },
-    "Ulang sampel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retry sample"
+    "Tukar bahasa berkuat kuasa serta-merta, tanpa memulakan semula aplikasi.": {},
+    "Tutup": {},
+    "Ulang sampel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retry sample"
           }
         }
       }
     },
-    "Versi" : {
-
+    "Versi": {},
+    "Watt": {},
+    "analisis makmal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lab analysis"
+          }
+        }
+      }
     },
-    "Watt" : {
-
-    }
+    "cukup untuk %lld stesen lagi": {},
+    "pH": {},
+    "—": {},
+    "“Dari Tasik ke Data. Dari Data ke Tindakan.”": {}
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SamplesView: View {
     enum Filter: String, CaseIterable {
-        case all, done, inProgress, pending
+        case all, done, inProgress, pending, lab
 
         func label(count: Int) -> String {
             let base: String
@@ -11,6 +11,7 @@ struct SamplesView: View {
             case .done: base = Localization.t("Selesai")
             case .inProgress: base = Localization.t("Diproses")
             case .pending: base = Localization.t("Belum")
+            case .lab: base = Localization.t("Menunggu makmal")
             }
             return "\(base) (\(count))"
         }
@@ -113,6 +114,8 @@ struct SamplesView: View {
         case .done: sample.status == .done
         case .inProgress: sample.status == .inProgress
         case .pending: false
+        // Mikropartikel jars collected but not yet reported on.
+        case .lab: sample.labStatus == .awaiting || sample.labStatus == .received
         }
     }
 
@@ -125,6 +128,8 @@ struct SamplesView: View {
             (mission?.orderedStations ?? []).count { station in
                 station.status != .done && !samples.contains { $0.station?.id == station.id }
             }
+        case .lab:
+            samples.count { $0.labStatus == .awaiting || $0.labStatus == .received }
         }
     }
 
@@ -148,6 +153,12 @@ struct SampleRow: View {
                     .foregroundStyle(.secondary)
             }
             Spacer(minLength: 6)
+            if sample.labStatus.isCollected, !sample.labStatus.hasResult {
+                Image(systemName: "flask.fill")
+                    .font(.caption2)
+                    .foregroundStyle(Theme.warning)
+                    .accessibilityLabel("Menunggu keputusan makmal")
+            }
             Circle()
                 .fill(sample.status.tint)
                 .frame(width: 8, height: 8)

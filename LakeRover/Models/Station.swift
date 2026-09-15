@@ -18,6 +18,15 @@ final class Station {
     var lastSampleAt: Date?
     var lastTurbidityNTU: Double?
 
+    // MARK: Mikropartikel script
+    /// Jar tag this station's filtered sample goes into.
+    var mpfJarID: String?
+    /// Where the demo pretends this station's jar is in the lab queue, and what comes back.
+    /// Seeded per station, copied onto the `Sample` when the station completes.
+    var plannedLabStatus: LabStatus = LabStatus.awaiting
+    var plannedMicroplasticsPerL: Double?
+    var plannedMicrofibrePerL: Double?
+
     var mission: Mission?
 
     @Relationship(deleteRule: .nullify, inverse: \Sample.station)
@@ -31,7 +40,7 @@ final class Station {
         latitude: Double,
         longitude: Double,
         depthM: Double? = nil,
-        targetParameters: [Parameter] = [.turbidity, .temperature, .pH, .dissolvedOxygen],
+        targetParameters: [Parameter] = [.turbidity, .temperature, .pH, .dissolvedOxygen, .microparticles],
         status: StationStatus = .waiting
     ) {
         self.id = id

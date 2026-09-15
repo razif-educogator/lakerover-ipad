@@ -19,6 +19,16 @@ final class Sample {
     var dissolvedOxygenMgL: Double?
     var studentNote: String = ""
 
+    // MARK: Mikropartikel — collected in the field, measured in a lab
+    /// Tag on the collection jar the filtered water goes into.
+    var mpfJarID: String?
+    /// Litres of lake water pushed through the jar's filter.
+    var filteredVolumeL: Double?
+    var labStatus: LabStatus = LabStatus.notCollected
+    /// Only populated once `labStatus == .done`.
+    var microplasticsPerL: Double?
+    var microfibrePerL: Double?
+
     var station: Station?
     var mission: Mission?
 
@@ -55,6 +65,16 @@ final class Sample {
         case .pH: pH
         case .dissolvedOxygen: dissolvedOxygenMgL
         case .conductivity: nil
+        case .microparticles: microparticlesPerL
         }
+    }
+
+    /// Mikropartikel is microplastics and microfibre combined, and only exists once the lab
+    /// has reported. `nil` while a result is still outstanding — never zero, so charts and
+    /// averages cannot mistake "not measured yet" for "clean".
+    var microparticlesPerL: Double? {
+        guard labStatus.hasResult else { return nil }
+        guard microplasticsPerL != nil || microfibrePerL != nil else { return nil }
+        return (microplasticsPerL ?? 0) + (microfibrePerL ?? 0)
     }
 }

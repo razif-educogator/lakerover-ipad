@@ -11,6 +11,10 @@ struct SamplingView: View {
         return env.runtime.station(at: index)
     }
 
+    private var collectsMicroparticles: Bool {
+        station?.targetParameters.contains(.microparticles) ?? true
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 14) {
@@ -19,6 +23,7 @@ struct SamplingView: View {
 
                 flowCard
                 LiveReadingsPanel(sampling: sampling)
+                MicroparticleJarCard(sampling: sampling, enabled: collectsMicroparticles)
 
                 FillProgress(
                     filledL: sampling?.filledL ?? 0,
