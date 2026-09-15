@@ -9,12 +9,12 @@
       "turbidityThresholdNTU": 15,
       "isDemoMission": true,
       "stations": [
-        { "index": 0, "name": "Jeti Utama",  "zone": "Jeti",    "latitude": 5.01100, "longitude": 100.97050, "depthM": 2.4, "lastTurbidityNTU": 8.2,  "lastDayOffset": -63 },
-        { "index": 1, "name": "Zon Utara",   "zone": "Utara",   "latitude": 5.01170, "longitude": 100.97080, "depthM": 3.6, "lastTurbidityNTU": 10.1, "lastDayOffset": -63 },
-        { "index": 2, "name": "Zon Tengah",  "zone": "Tengah",  "latitude": 5.01215, "longitude": 100.97145, "depthM": 4.8, "lastTurbidityNTU": 12.4, "lastDayOffset": -63 },
-        { "index": 3, "name": "Zon Selatan", "zone": "Selatan", "latitude": 5.01180, "longitude": 100.97220, "depthM": 3.2, "lastTurbidityNTU": 15.4, "lastDayOffset": -63 },
-        { "index": 4, "name": "Zon Barat",   "zone": "Barat",   "latitude": 5.01105, "longitude": 100.97210, "depthM": 3.9, "lastTurbidityNTU": 12.9, "lastDayOffset": -63 },
-        { "index": 5, "name": "Zon Timur",   "zone": "Timur",   "latitude": 5.01060, "longitude": 100.97140, "depthM": 2.9, "lastTurbidityNTU": 11.0, "lastDayOffset": -63 }
+        { "index": 0, "name": "Jeti Utama", "zone": "Jeti",    "latitude": 4.94420, "longitude": 100.93897, "depthM": 2.4, "lastTurbidityNTU": 8.2,  "lastDayOffset": -63 },
+        { "index": 1, "name": "Stesen 2",   "zone": "Utara",   "latitude": 4.94945, "longitude": 100.94356, "depthM": 3.6, "lastTurbidityNTU": 10.1, "lastDayOffset": -63 },
+        { "index": 2, "name": "Stesen 3",   "zone": "Tengah",  "latitude": 4.95772, "longitude": 100.94189, "depthM": 4.8, "lastTurbidityNTU": 12.4, "lastDayOffset": -63 },
+        { "index": 3, "name": "Stesen 4",   "zone": "Selatan", "latitude": 4.95882, "longitude": 100.95189, "depthM": 3.2, "lastTurbidityNTU": 15.4, "lastDayOffset": -63 },
+        { "index": 4, "name": "Stesen 5",   "zone": "Barat",   "latitude": 4.95608, "longitude": 100.95535, "depthM": 3.9, "lastTurbidityNTU": 12.9, "lastDayOffset": -63 },
+        { "index": 5, "name": "Stesen 6",   "zone": "Timur",   "latitude": 4.96207, "longitude": 100.96187, "depthM": 2.9, "lastTurbidityNTU": 11.0, "lastDayOffset": -63 }
       ]
     },
     {

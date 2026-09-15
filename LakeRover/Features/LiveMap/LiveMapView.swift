@@ -9,10 +9,11 @@ struct LiveMapView: View {
     @State private var follow = true
     @State private var confirmSkip = false
 
+    /// Centred on the Cenderoh route with a ~3 km span, so all six stations are visible.
     private static let defaultRegion = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 5.0112, longitude: 100.9714),
-        latitudinalMeters: 700,
-        longitudinalMeters: 700
+        center: CLLocationCoordinate2D(latitude: 4.9546, longitude: 100.9503),
+        latitudinalMeters: 3000,
+        longitudinalMeters: 3000
     )
 
     private var telemetry: Telemetry { env.telemetry.latest }

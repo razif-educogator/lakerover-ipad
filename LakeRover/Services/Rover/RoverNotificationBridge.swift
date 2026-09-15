@@ -34,12 +34,13 @@ enum RoverNotificationBridge {
     }
 
     static func observeNotifyActions(_ handler: @escaping @MainActor (String) -> Void) -> NSObjectProtocol {
-        NotificationCenter.default.addObserver(
+        let key = identifierKey
+        return NotificationCenter.default.addObserver(
             forName: notifyAction,
             object: nil,
             queue: .main
         ) { note in
-            let identifier = note.userInfo?[identifierKey] as? String
+            let identifier = note.userInfo?[key] as? String
             MainActor.assumeIsolated {
                 if let identifier { handler(identifier) }
             }
@@ -47,12 +48,13 @@ enum RoverNotificationBridge {
     }
 
     static func observeTriggers(_ handler: @escaping @MainActor (String) -> Void) -> NSObjectProtocol {
-        NotificationCenter.default.addObserver(
+        let key = triggerIdentifierKey
+        return NotificationCenter.default.addObserver(
             forName: notificationTrigger,
             object: nil,
             queue: .main
         ) { note in
-            let identifier = note.userInfo?[triggerIdentifierKey] as? String
+            let identifier = note.userInfo?[key] as? String
             MainActor.assumeIsolated {
                 if let identifier { handler(identifier) }
             }
