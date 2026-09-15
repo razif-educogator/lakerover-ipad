@@ -48,7 +48,9 @@ final class AppEnvironment {
         self.context = context
 
         SeedDataLoader.loadIfNeeded(into: context)
-        self.settings = SeedDataLoader.settings(in: context)
+        let settings = SeedDataLoader.settings(in: context)
+        self.settings = settings
+        Localization.language = settings.appLanguage
         self.alerts = AlertCenter(context: context)
         self.runtime = MissionRuntime(context: context)
         self.client = SimulatedRoverClient()
@@ -57,9 +59,15 @@ final class AppEnvironment {
     // MARK: Derived state used by shared chrome
 
     var unreadAlertCount: Int { alerts.unreadCount }
+    /// Keeps plain-`String` lookups in step with `Text` (see `Localization`).
+    var currentLanguage: AppLanguage {
+        let language = settings.appLanguage
+        Localization.language = language
+        return language
+    }
     var bannerAlert: RoverAlert? { alerts.banner }
     var hasActiveMission: Bool { runtime.hasActiveMission }
-    var language: AppLanguage { settings.appLanguage }
+    var language: AppLanguage { currentLanguage }
 
     func dismissBanner() { alerts.dismissBanner() }
 

@@ -53,7 +53,7 @@ struct FillProgress: View {
     }
 
     private var estimateText: String {
-        guard secondsRemaining > 1 else { return String(localized: "Pensampelan hampir selesai") }
+        guard secondsRemaining > 1 else { return Localization.t("Pensampelan hampir selesai") }
         let minutes = Int((secondsRemaining / 60).rounded(.up))
         return "Anggaran selesai dalam \(minutes) min"
     }

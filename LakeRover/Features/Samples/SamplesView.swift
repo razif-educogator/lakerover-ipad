@@ -7,10 +7,10 @@ struct SamplesView: View {
         func label(count: Int) -> String {
             let base: String
             switch self {
-            case .all: base = String(localized: "Semua")
-            case .done: base = String(localized: "Selesai")
-            case .inProgress: base = String(localized: "Diproses")
-            case .pending: base = String(localized: "Belum")
+            case .all: base = Localization.t("Semua")
+            case .done: base = Localization.t("Selesai")
+            case .inProgress: base = Localization.t("Diproses")
+            case .pending: base = Localization.t("Belum")
             }
             return "\(base) (\(count))"
         }

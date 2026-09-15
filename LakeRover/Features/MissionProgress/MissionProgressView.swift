@@ -41,7 +41,7 @@ struct MissionProgressView: View {
             .padding(Theme.gutter)
         }
         .background(Theme.screenBackground)
-        .navigationTitle(mission.map { "Misi \($0.lakeName)" } ?? String(localized: "Misi"))
+        .navigationTitle(mission.map { "Misi \($0.lakeName)" } ?? Localization.t("Misi"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

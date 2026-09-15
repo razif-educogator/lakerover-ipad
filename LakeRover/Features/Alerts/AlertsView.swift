@@ -55,7 +55,7 @@ struct AlertsView: View {
     private var chips: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                Chip(title: "\(String(localized: "Semua")) (\(count(nil)))", selected: filter == nil) {
+                Chip(title: "\(Localization.t("Semua")) (\(count(nil)))", selected: filter == nil) {
                     filter = nil
                 }
                 ForEach(Severity.allCases, id: \.self) { severity in
@@ -69,9 +69,9 @@ struct AlertsView: View {
 
     private func label(_ severity: Severity) -> String {
         switch severity {
-        case .critical: String(localized: "Kritikal")
-        case .warning: String(localized: "Amaran")
-        case .info: String(localized: "Maklumat")
+        case .critical: Localization.t("Kritikal")
+        case .warning: Localization.t("Amaran")
+        case .info: Localization.t("Maklumat")
         }
     }
 

@@ -41,7 +41,7 @@ struct PowerView: View {
                     VStack(spacing: 4) {
                         SettingToggleRow(
                             title: "Mod operasi autonomi",
-                            subtitle: String(localized: "Rover meneruskan misi walaupun pautan terputus"),
+                            subtitle: Localization.t("Rover meneruskan misi walaupun pautan terputus"),
                             isOn: Binding(
                                 get: { settings.autonomousMode },
                                 set: { settings.autonomousMode = $0; env.send(.setAutonomous($0)); save() }
@@ -50,7 +50,7 @@ struct PowerView: View {
                         Divider()
                         SettingToggleRow(
                             title: "Pulang automatik",
-                            subtitle: String(format: String(localized: "Bateri di bawah %d%%"), settings.autoReturnThreshold),
+                            subtitle: String(format: Localization.t("Bateri di bawah %d%%"), settings.autoReturnThreshold),
                             isOn: Binding(
                                 get: { settings.autoReturnEnabled },
                                 set: {
@@ -80,7 +80,7 @@ struct PowerView: View {
                         Divider()
                         SettingToggleRow(
                             title: "Mod jimat kuasa",
-                            subtitle: String(localized: "Kurangkan kadar telemetri dan kamera"),
+                            subtitle: Localization.t("Kurangkan kadar telemetri dan kamera"),
                             isOn: Binding(
                                 get: { settings.powerSaveMode },
                                 set: { settings.powerSaveMode = $0; env.send(.setPowerSave($0)); save() }

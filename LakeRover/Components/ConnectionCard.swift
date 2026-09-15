@@ -45,20 +45,20 @@ struct ConnectionCard: View {
 
     private var title: String {
         switch state {
-        case .searching: String(localized: "Mencari rover…")
+        case .searching: Localization.t("Mencari rover…")
         case .connected(let name, _, _, _): "\(name) disambung"
-        case .notFound: String(localized: "Rover tidak dijumpai")
+        case .notFound: Localization.t("Rover tidak dijumpai")
         }
     }
 
     private var subtitle: String {
         switch state {
         case .searching:
-            String(localized: "Menyemak pautan tempatan dan 4G")
+            Localization.t("Menyemak pautan tempatan dan 4G")
         case .connected(_, let link, let battery, let satellites):
             "\(link) · Bateri \(battery)% · GPS \(satellites) satelit"
         case .notFound:
-            String(localized: "Teruskan dengan mod demo — rover disimulasikan sepenuhnya.")
+            Localization.t("Teruskan dengan mod demo — rover disimulasikan sepenuhnya.")
         }
     }
 }

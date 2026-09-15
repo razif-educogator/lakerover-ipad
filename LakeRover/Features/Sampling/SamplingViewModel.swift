@@ -27,7 +27,7 @@ final class SamplingViewModel {
 
     func readTag(reader: any CartridgeTagReader, expected: String) {
         isScanning = true
-        tagMessage = String(localized: "Mengimbas tag kartrij…")
+        tagMessage = Localization.t("Mengimbas tag kartrij…")
         reader.expectedTag = expected
         Task { [weak self] in
             guard let self else { return }
@@ -37,7 +37,7 @@ final class SamplingViewModel {
                 self.tagMessage = nil
             } catch {
                 // NFC unavailable — offer manual entry (design.md, error handling).
-                self.tagMessage = String(localized: "Pembaca NFC tidak tersedia.")
+                self.tagMessage = Localization.t("Pembaca NFC tidak tersedia.")
                 self.showManualEntry = true
             }
             self.isScanning = false

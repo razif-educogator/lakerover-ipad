@@ -6,8 +6,8 @@ enum InsightsRange: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .mission: String(localized: "Misi ini")
-        case .days30: String(localized: "30 hari")
+        case .mission: Localization.t("Misi ini")
+        case .days30: Localization.t("30 hari")
         }
     }
 }

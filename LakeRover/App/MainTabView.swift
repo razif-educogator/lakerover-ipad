@@ -35,7 +35,8 @@ struct MainTabView: View {
                 .tag(MainTab.amaran)
         }
         .overlay(alignment: .top) { CriticalBanner() }
-        .overlay(alignment: .bottom) { ShowcaseOverlay() }
+        // A safe-area inset rather than an overlay, so the caption never covers a control.
+        .safeAreaInset(edge: .bottom, spacing: 0) { ShowcaseOverlay() }
         .sheet(item: sheet) { route in
             switch route {
             case .power:

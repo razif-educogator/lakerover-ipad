@@ -46,7 +46,7 @@ struct StationDetailView: View {
     }
 
     private var titleText: String {
-        guard let station else { return String(localized: "Butiran stesen") }
+        guard let station else { return Localization.t("Butiran stesen") }
         return "Stesen \(station.shortCode) · \(station.name)"
     }
 
@@ -117,7 +117,7 @@ struct StationDetailView: View {
 
     private var reason: String {
         guard let distanceM else {
-            return String(localized: "Menunggu telemetri rover.")
+            return Localization.t("Menunggu telemetri rover.")
         }
         return String(format: "Rover %.0f m dari stesen — pensampelan bermula dalam jarak 10 m.", distanceM)
     }

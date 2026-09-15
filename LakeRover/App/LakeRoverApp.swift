@@ -12,6 +12,7 @@ struct LakeRoverApp: App {
                 .modelContainer(env.container)
                 .tint(Theme.accent)
                 .environment(\.locale, env.language.locale)
+                .task { await DebugAutorun.run(env: env) }
         }
     }
 }

@@ -36,8 +36,8 @@ struct BatteryRing: View {
 
     private var rateText: String {
         let word = ratePctPerMin >= 0
-            ? String(localized: "Mengecas")
-            : String(localized: "Menggunakan")
+            ? Localization.t("Mengecas")
+            : Localization.t("Menggunakan")
         return String(format: "%@ %+.1f %%/min", word, ratePctPerMin)
     }
 }

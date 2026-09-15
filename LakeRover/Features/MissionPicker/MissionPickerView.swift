@@ -7,10 +7,10 @@ struct MissionPickerView: View {
 
         var label: String {
             switch self {
-            case .all: String(localized: "Semua")
-            case .today: String(localized: "Hari ini")
-            case .completed: String(localized: "Lengkap")
-            case .draft: String(localized: "Draf")
+            case .all: Localization.t("Semua")
+            case .today: Localization.t("Hari ini")
+            case .completed: Localization.t("Lengkap")
+            case .draft: Localization.t("Draf")
             }
         }
     }

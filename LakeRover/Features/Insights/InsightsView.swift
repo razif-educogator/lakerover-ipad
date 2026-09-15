@@ -80,8 +80,8 @@ struct InsightsView: View {
             )
             if !comparison.isEmpty {
                 HStack(spacing: 14) {
-                    legendDot(color: Theme.accent, label: String(localized: "Misi ini"))
-                    legendDot(color: Theme.accent.opacity(0.35), label: String(localized: "Misi lalu"))
+                    legendDot(color: Theme.accent, label: Localization.t("Misi ini"))
+                    legendDot(color: Theme.accent.opacity(0.35), label: Localization.t("Misi lalu"))
                 }
             }
         }
@@ -144,7 +144,7 @@ struct InsightsView: View {
                     RecommendationCard(text: text)
                 } else {
                     RecommendationCard(
-                        text: String(localized: "Semua stesen dalam had. Teruskan pemantauan dua minggu sekali.")
+                        text: Localization.t("Semua stesen dalam had. Teruskan pemantauan dua minggu sekali.")
                     )
                 }
             }

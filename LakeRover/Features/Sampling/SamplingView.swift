@@ -59,12 +59,12 @@ struct SamplingView: View {
     }
 
     private var titleText: String {
-        guard let station else { return String(localized: "Pensampelan") }
+        guard let station else { return Localization.t("Pensampelan") }
         return "Stesen \(station.shortCode) · \(statusWord)"
     }
 
     private var statusWord: String {
-        sampling == nil ? String(localized: "Selesai") : String(localized: "Sedang diproses")
+        sampling == nil ? Localization.t("Selesai") : Localization.t("Sedang diproses")
     }
 
     private var flowCard: some View {
@@ -88,7 +88,7 @@ struct SamplingView: View {
     }
 
     private var flowCaption: String {
-        guard let sampling else { return String(localized: "Menunggu pensampelan bermula.") }
+        guard let sampling else { return Localization.t("Menunggu pensampelan bermula.") }
         let elapsed = Int(sampling.elapsed)
         return String(
             format: "Pam %.1f L/min · Kartrij %@ · Masa %d:%02d",
@@ -102,7 +102,7 @@ struct SamplingView: View {
             HStack(spacing: 8) {
                 Image(systemName: model.tagID == nil ? "wave.3.right" : "checkmark.seal.fill")
                     .foregroundStyle(model.tagID == nil ? .secondary : Theme.success)
-                Text(model.tagID ?? model.tagMessage ?? String(localized: "Menunggu langkah Tag"))
+                Text(model.tagID ?? model.tagMessage ?? Localization.t("Menunggu langkah Tag"))
                     .font(.subheadline.weight(model.tagID == nil ? .regular : .semibold))
                 Spacer()
                 if model.isScanning { ProgressView().controlSize(.small) }
