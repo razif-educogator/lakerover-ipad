@@ -66,21 +66,20 @@ struct LiveMapView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                // Full-bleed: the map draws behind the toolbar, so the top inset below only
+                // reserves space for the chrome and never pushes the map down.
                 map
-                    .ignoresSafeArea(edges: .bottom)
+                    .ignoresSafeArea()
 
                 if mission == nil {
                     noMissionOverlay
                 }
-
-                overlays
             }
+            .safeAreaInset(edge: .top, spacing: 0) { topOverlay }
+            .safeAreaInset(edge: .bottom, spacing: 0) { bottomOverlay }
             .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    liveIndicator
-                }
                 RoverToolbar()
             }
             .onChange(of: Int(telemetry.uptime)) { _, _ in recentreIfFollowing() }
@@ -186,23 +185,45 @@ struct LiveMapView: View {
 
     // MARK: Overlays
 
-    private var overlays: some View {
-        VStack(spacing: 0) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: Theme.tight) {
-                    RoverStatusPanel(telemetry: telemetry)
-                    if let weather {
-                        WeatherCard(summary: weather)
-                    }
+    /// Height of the iPadOS floating header row: the tab bar, the Demo badge, and the Tenaga
+    /// and Tetapan icons. That row is drawn *over* the content and does not participate in the
+    /// safe area, so `safeAreaInset` reserves nothing for it — it only accounts for the status
+    /// bar. Clearing it needs an explicit offset. Measured from the device screenshot: the row
+    /// ends ~70 pt from the window top against a 24 pt status bar, so ~46 pt is the minimum;
+    /// 64 pt leaves a visible gap. Identical in portrait and landscape, since the iPad status
+    /// bar and this row are the same height in both.
+    private static let floatingHeaderHeight: CGFloat = 64
+
+
+
+    /// Hosted by `.safeAreaInset(edge: .top)` so the status bar is measured rather than
+    /// guessed, plus `floatingHeaderHeight` for the bar that the safe area does not report.
+    private var topOverlay: some View {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading, spacing: Theme.tight) {
+                // Lives here rather than in the navigation bar's leading slot: as a toolbar
+                // item it was drawn over the "Status rover" heading below it.
+                liveIndicator
+                RoverStatusPanel(telemetry: telemetry)
+                if let weather {
+                    WeatherCard(summary: weather)
                 }
-                Spacer(minLength: 12)
+                // Layer chips live in this column, not the top-right corner: that corner is
+                // owned by the floating Demo badge and the Tenaga / Tetapan icons.
                 LayerChips(layer: $layer)
             }
-            .padding(.horizontal, Theme.gutter)
-            .padding(.top, Theme.tight)
-
             Spacer(minLength: 0)
+        }
+        .padding(.horizontal, Theme.gutter)
+        .padding(.top, Self.floatingHeaderHeight)
+    }
 
+    /// Hosted by `.safeAreaInset(edge: .bottom)`, which reserves exactly this view's height
+    /// inside the safe area. That is what keeps the station card and both of its buttons fully
+    /// visible in landscape and clear of the home indicator: the map ignores the safe area, so
+    /// anything merely stacked over it would be laid out against the physical screen edge.
+    private var bottomOverlay: some View {
+        VStack(spacing: Theme.tight) {
             HStack(alignment: .bottom) {
                 Spacer(minLength: 0)
                 MapControls(
@@ -214,30 +235,30 @@ struct LiveMapView: View {
                     }
                 )
             }
-            .padding(.horizontal, Theme.gutter)
-            .padding(.bottom, Theme.tight)
 
             // Banner sits above the station card with spacing; both keep their full height.
-            VStack(spacing: Theme.tight) {
-                if telemetry.isStopped {
-                    stopBanner
-                }
-
-                NextStationCard(
-                    station: currentStation,
-                    distanceM: telemetry.distanceToStationM,
-                    etaSeconds: telemetry.etaToStationS,
-                    samplingInProgress: telemetry.sampling != nil,
-                    isReturning: telemetry.isReturning,
-                    onDetails: {
-                        if let id = currentStation?.id { env.router.sheet = .stationDetail(id) }
-                    },
-                    onSkip: { confirmSkip = true }
-                )
+            if telemetry.isStopped {
+                stopBanner
             }
-            .padding(.horizontal, Theme.gutter)
-            .padding(.bottom, Theme.gutter)
+
+            NextStationCard(
+                station: currentStation,
+                distanceM: telemetry.distanceToStationM,
+                etaSeconds: telemetry.etaToStationS,
+                samplingInProgress: telemetry.sampling != nil,
+                isReturning: telemetry.isReturning,
+                onDetails: {
+                    if let id = currentStation?.id { env.router.sheet = .stationDetail(id) }
+                },
+                onSkip: { confirmSkip = true }
+            )
         }
+        .padding(.horizontal, Theme.gutter)
+        .padding(.bottom, Theme.tight)
+        // Take the ideal height and never compress: the buttons are last in the stack, so any
+        // height cap or squeeze removes them first. No `maxHeight` — the card must always show
+        // its heading, detail line, coordinates and both buttons.
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     private var stopBanner: some View {
