@@ -25,7 +25,16 @@
       "routeLengthM": 3000,
       "turbidityThresholdNTU": 15,
       "isDemoMission": false,
-      "autoStations": { "count": 8, "latitude": 4.85400, "longitude": 100.94200, "radiusM": 320 }
+      "stations": [
+        { "index": 0, "name": "Stesen 1", "zone": "Zon 1", "latitude": 5.00196, "longitude": 100.94599, "depthM": 3.0 },
+        { "index": 1, "name": "Stesen 2", "zone": "Zon 2", "latitude": 4.99959, "longitude": 100.94378, "depthM": 4.0 },
+        { "index": 2, "name": "Stesen 3", "zone": "Zon 3", "latitude": 4.99892, "longitude": 100.94560, "depthM": 5.0 },
+        { "index": 3, "name": "Stesen 4", "zone": "Zon 4", "latitude": 4.99722, "longitude": 100.94615, "depthM": 3.0 },
+        { "index": 4, "name": "Stesen 5", "zone": "Zon 5", "latitude": 4.99869, "longitude": 100.95063, "depthM": 4.0 },
+        { "index": 5, "name": "Stesen 6", "zone": "Zon 6", "latitude": 4.99187, "longitude": 100.95224, "depthM": 5.0 },
+        { "index": 6, "name": "Stesen 7", "zone": "Zon 7", "latitude": 4.99347, "longitude": 100.95963, "depthM": 3.0 },
+        { "index": 7, "name": "Stesen 8", "zone": "Zon 8", "latitude": 4.99572, "longitude": 100.95909, "depthM": 4.0 }
+      ]
     },
     {
       "name": "Misi Sedimen Bukit Merah",

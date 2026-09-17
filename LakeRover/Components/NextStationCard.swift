@@ -7,12 +7,23 @@ struct NextStationCard: View {
     var distanceM: Double?
     var etaSeconds: Double?
     var samplingInProgress: Bool
+    var isReturning: Bool = false
     var onDetails: () -> Void
     var onSkip: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            if let station {
+            if isReturning {
+                HStack(spacing: 6) {
+                    Image(systemName: "arrow.uturn.backward")
+                        .foregroundStyle(Theme.warning)
+                    Text("Pulang ke jeti")
+                        .font(.subheadline.weight(.semibold))
+                }
+                Text("Rover menjejak semula laluan misi ke Jeti Utama.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else if let station {
                 HStack(spacing: 6) {
                     Text(samplingInProgress ? "Sedang diproses:" : "Seterusnya:")
                         .font(.caption)

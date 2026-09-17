@@ -18,8 +18,8 @@ final class AlertCenter {
         refreshUnreadCount()
     }
 
-    func ingest(_ telemetry: Telemetry, thresholds: AlertEngine.Thresholds) {
-        let drafts = engine.evaluate(telemetry, thresholds: thresholds)
+    func ingest(_ telemetry: Telemetry, thresholds: AlertEngine.Thresholds, weather: WeatherSummary?) {
+        let drafts = engine.evaluate(telemetry, thresholds: thresholds, weather: weather)
         guard !drafts.isEmpty else { return }
         for draft in drafts {
             let alert = RoverAlert(

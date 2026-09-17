@@ -42,6 +42,10 @@ final class SimulatedRoverClient: RoverClient {
     private var heading: Double = 0
     private var rng = SeededGenerator()
     private var pendingCompletion: CompletedSampling?
+    /// Station indices still to visit on the way home, highest first.
+    private var returnQueue: [Int] = []
+    /// Station the retrace began from, so the map can draw the whole return leg.
+    private var returnStartIndex: Int?
     private var readings = (turbidity: 0.0, temperature: 0.0, pH: 0.0, dissolvedOxygen: 0.0)
 
     // MARK: RoverClient
@@ -66,6 +70,8 @@ final class SimulatedRoverClient: RoverClient {
             uptime = 0
             battery = 78
             skipped = []
+            returnQueue = []
+            returnStartIndex = nil
             mode = .idle
             emit()
 
@@ -88,8 +94,7 @@ final class SimulatedRoverClient: RoverClient {
             if mode == .stopped { mode = resumeMode }
 
         case .returnHome:
-            mode = .returning
-            legProgress = 0
+            beginReturn()
 
         case .skipStation(let index):
             skipped.insert(index)
@@ -115,6 +120,8 @@ final class SimulatedRoverClient: RoverClient {
             targetIndex = index
             position = route[index].coordinate
             legProgress = 0
+            returnQueue = []
+            returnStartIndex = nil
             uptime = max(uptime, Double(index) * 95)
             battery = batteryLevel(forProgress: Double(index) / Double(max(route.count, 1)))
             beginSampling(at: index)
@@ -194,16 +201,39 @@ final class SimulatedRoverClient: RoverClient {
         }
     }
 
-    private func advanceReturn(dt: Double) {
-        guard let home = route.first?.coordinate else { mode = .completed; return }
-        let remaining = Geo.distance(position, home)
-        if remaining < 1 {
+    /// Starts the trip home. A straight line to the jetty would cut across land, so the rover
+    /// retraces the stations it actually reached, in reverse — a path already known to be water.
+    private func beginReturn() {
+        guard !route.isEmpty else {
             mode = .completed
             return
         }
-        heading = Geo.bearing(from: position, to: home)
-        let step = min(cruiseSpeed * dt, remaining)
-        position = Geo.interpolate(position, home, fraction: step / remaining)
+        let from = min(max(targetIndex, 0), route.count - 1)
+        returnStartIndex = from
+        returnQueue = Array(stride(from: from - 1, through: 0, by: -1))
+        legProgress = 0
+        // Already at the jetty: nothing to retrace.
+        mode = returnQueue.isEmpty ? .completed : .returning
+    }
+
+    /// Hops station to station down the queue, so the track follows the outbound legs exactly.
+    private func advanceReturn(dt: Double) {
+        guard let nextIndex = returnQueue.first, route.indices.contains(nextIndex) else {
+            mode = .completed
+            return
+        }
+        let target = route[nextIndex].coordinate
+        let remaining = Geo.distance(position, target)
+        heading = Geo.bearing(from: position, to: target)
+
+        let step = cruiseSpeed * dt
+        if step >= remaining || remaining < 0.5 {
+            position = target
+            returnQueue.removeFirst()
+            if returnQueue.isEmpty { mode = .completed }
+            return
+        }
+        position = Geo.interpolate(position, target, fraction: step / remaining)
     }
 
     // MARK: Sampling
@@ -274,7 +304,8 @@ final class SimulatedRoverClient: RoverClient {
             legProgress = 0
             mode = .travelling
         } else {
-            mode = .completed
+            // Last station done — head home along the route instead of stopping out on the lake.
+            beginReturn()
         }
     }
 
@@ -383,6 +414,8 @@ final class SimulatedRoverClient: RoverClient {
         t.isPaused = mode == .paused
         t.isStopped = mode == .stopped
         t.missionCompleted = mode == .completed
+        t.isReturning = mode == .returning
+        t.returnFromStationIndex = mode == .returning ? returnStartIndex : nil
 
         switch mode {
         case .travelling, .returning:

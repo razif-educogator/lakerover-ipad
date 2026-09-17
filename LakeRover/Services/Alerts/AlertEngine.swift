@@ -22,11 +22,16 @@ struct AlertEngine {
     }
 
     private var active: Set<AlertKind> = []
-    private var firedOnce: Set<AlertKind> = []
     private var lowFlowSince: Double?
     private var linkLostSince: Double?
 
-    mutating func evaluate(_ t: Telemetry, thresholds: Thresholds = Thresholds()) -> [DraftAlert] {
+    /// `weather` is the app's single seed weather value for the active mission's lake. It is
+    /// only used for alert wording — no rule depends on it.
+    mutating func evaluate(
+        _ t: Telemetry,
+        thresholds: Thresholds = Thresholds(),
+        weather: WeatherSummary? = nil
+    ) -> [DraftAlert] {
         var drafts: [DraftAlert] = []
 
         // Battery
@@ -115,20 +120,49 @@ struct AlertEngine {
             clear(.waterIngress)
         }
 
-        // Informational: good charging conditions. Once per session.
-        if t.solarW >= thresholds.solarInfoW, !firedOnce.contains(.custom) {
-            firedOnce.insert(.custom)
-            drafts.append(DraftAlert(
-                severity: .info,
-                kind: .custom,
-                title: "Cuaca cerah — pengecasan optimum",
-                detail: String(format: "Panel solar menghasilkan %.0f W. Misi boleh diteruskan lebih lama.", t.solarW),
-                primaryAction: .none,
-                stationIndex: nil
-            ))
+        // Solar charging — exactly one alert, chosen by the shared seed weather rather than by
+        // instantaneous watts, so it always agrees with the card on the Live map. The two kinds
+        // clear each other, so "optimum" and "terjejas" can never be raised together.
+        if let weather {
+            if weather.reducesSolarCharging {
+                clear(.custom)
+                if fire(.reducedSolar) {
+                    drafts.append(DraftAlert(
+                        severity: .warning,
+                        kind: .reducedSolar,
+                        title: "Pengecasan solar terjejas",
+                        detail: weather.isRain
+                            ? "Cuaca hujan — penjanaan solar sangat rendah. Pertimbangkan hadkan jarak misi atau pulang lebih awal."
+                            : "Cuaca mendung — penjanaan solar rendah. Pertimbangkan hadkan jarak misi atau pulang lebih awal.",
+                        primaryAction: .viewPower,
+                        stationIndex: nil
+                    ))
+                }
+            } else if weather.isClear {
+                clear(.reducedSolar)
+                if fire(.custom) {
+                    drafts.append(DraftAlert(
+                        severity: .info,
+                        kind: .custom,
+                        title: weatherTitle(for: weather),
+                        detail: String(format: "Panel solar menghasilkan %.0f W. Misi boleh diteruskan lebih lama.", t.solarW),
+                        primaryAction: .none,
+                        stationIndex: nil
+                    ))
+                }
+            }
+            // An unrecognised condition raises neither, rather than inventing a claim.
+        } else {
+            clear(.reducedSolar)
+            clear(.custom)
         }
 
         return drafts
+    }
+
+    /// "Cuaca Cerah 31°C — pengecasan optimum". Only ever called for clear weather.
+    private func weatherTitle(for weather: WeatherSummary) -> String {
+        "Cuaca \(weather.condition) \(Int(weather.temperatureC.rounded()))°C — pengecasan optimum"
     }
 
     private mutating func fire(_ kind: AlertKind) -> Bool {

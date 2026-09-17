@@ -31,6 +31,9 @@ enum MissionRoute: Hashable {
     case sampling
     case editor
     case roverModel
+    /// Mission Picker reached from Mission Progress ("Tukar tasik"), so the lake list is
+    /// available mid-demo without ending the active mission.
+    case picker
 }
 
 enum AppSheet: Identifiable, Hashable {

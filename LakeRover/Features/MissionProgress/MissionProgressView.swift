@@ -44,11 +44,18 @@ struct MissionProgressView: View {
         .navigationTitle(mission.map { "Misi \($0.lakeName)" } ?? Localization.t("Misi"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItemGroup(placement: .topBarLeading) {
                 Button {
                     env.router.missionPath = [.roverModel]
                 } label: {
                     Label("Model AR", systemImage: "cube.transparent")
+                }
+                // Lets the presenter show the lake list mid-demo. Going back leaves the
+                // active mission untouched; picking one and tapping "Mula misi" switches.
+                Button {
+                    env.router.missionPath = [.picker]
+                } label: {
+                    Label("Tukar tasik", systemImage: "map")
                 }
             }
             RoverToolbar()

@@ -24,6 +24,7 @@ struct MissionTabRoot: View {
                 case .sampling: SamplingView()
                 case .editor: MissionEditorView()
                 case .roverModel: RoverModelView()
+                case .picker: MissionPickerView()
                 }
             }
         }

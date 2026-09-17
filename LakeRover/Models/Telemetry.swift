@@ -100,6 +100,11 @@ struct Telemetry: Sendable, Equatable {
     var isStopped = false
     var missionCompleted = false
     var completedSampling: CompletedSampling?
+    /// The rover is retracing the mission route back to the jetty.
+    var isReturning = false
+    /// Station the retrace started from; the return leg runs from here back to station 0,
+    /// so the map can draw it without guessing.
+    var returnFromStationIndex: Int?
 
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

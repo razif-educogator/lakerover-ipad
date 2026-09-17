@@ -91,6 +91,8 @@ struct AlertsView: View {
         case .showOnMap:
             let station = alert.stationIndex.flatMap { env.runtime.station(at: $0) }
             env.router.focusOnMap(stationID: station?.id)
+        case .viewPower:
+            env.router.sheet = .power
         case .none:
             break
         }

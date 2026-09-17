@@ -45,10 +45,15 @@ struct LiveMapView: View {
     private var mission: Mission? { env.runtime.activeMission }
     private var stations: [Station] { mission?.orderedStations ?? [] }
 
-    /// Same seed value the Mission Picker shows, so the two screens never disagree.
-    private var weather: WeatherSummary? {
-        guard let lakeName = mission?.lakeName else { return nil }
-        return env.weather.summary(forLake: lakeName)
+    /// Reads the app-wide seed weather, the same value the weather alert uses.
+    private var weather: WeatherSummary? { env.currentWeather }
+
+    /// Stations of the return trip, in the order the rover retraces them.
+    private var returnLeg: [Station] {
+        guard telemetry.isReturning, let from = telemetry.returnFromStationIndex else { return [] }
+        return stations
+            .filter { $0.index <= from }
+            .sorted { $0.index > $1.index }
     }
 
     private var currentStation: Station? {
@@ -114,6 +119,16 @@ struct LiveMapView: View {
             if stations.count > 1 {
                 MapPolyline(coordinates: stations.map(\.coordinate))
                     .stroke(Theme.accent, style: StrokeStyle(lineWidth: 3, dash: [8, 5]))
+            }
+
+            // Return leg: the outbound route in reverse, so it stays over water. Drawn thicker,
+            // amber and dotted so it reads as a different trip from the outbound dashes.
+            if returnLeg.count > 1 {
+                MapPolyline(coordinates: returnLeg.map(\.coordinate))
+                    .stroke(
+                        Theme.warning,
+                        style: StrokeStyle(lineWidth: 5, lineCap: .round, dash: [1, 9])
+                    )
             }
 
             if layer == .depth {
@@ -213,6 +228,7 @@ struct LiveMapView: View {
                     distanceM: telemetry.distanceToStationM,
                     etaSeconds: telemetry.etaToStationS,
                     samplingInProgress: telemetry.sampling != nil,
+                    isReturning: telemetry.isReturning,
                     onDetails: {
                         if let id = currentStation?.id { env.router.sheet = .stationDetail(id) }
                     },

@@ -24,6 +24,14 @@ final class AppEnvironment {
     let showcase = ShowcaseCoordinator()
     let weather = WeatherProvider()
 
+    /// The single source of truth for "what is the weather right now": seed data for the
+    /// active mission's lake. The Live map card and the weather alert both read this, so they
+    /// can never disagree.
+    var currentWeather: WeatherSummary? {
+        guard let lakeName = runtime.activeMission?.lakeName else { return nil }
+        return weather.summary(forLake: lakeName)
+    }
+
     var client: any RoverClient
     var tagReader: any CartridgeTagReader = SimulatedTagReader()
     var settings: AppSettings
@@ -127,7 +135,7 @@ final class AppEnvironment {
                 guard let self else { return }
                 self.telemetry.ingest(frame)
                 self.runtime.ingest(frame)
-                self.alerts.ingest(frame, thresholds: self.thresholds)
+                self.alerts.ingest(frame, thresholds: self.thresholds, weather: self.currentWeather)
                 if let sampling = frame.sampling {
                     self.tagReader.expectedTag = sampling.cartridgeID
                 }

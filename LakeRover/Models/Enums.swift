@@ -99,17 +99,18 @@ enum Severity: String, Codable, CaseIterable, Sendable {
 }
 
 enum AlertKind: String, Codable, CaseIterable, Sendable {
-    case lowBattery, lowFlow, obstacle, linkLost, waterIngress, custom
+    case lowBattery, lowFlow, obstacle, linkLost, waterIngress, reducedSolar, custom
 }
 
 enum AlertAction: String, Codable, CaseIterable, Sendable {
-    case returnHome, retrySample, showOnMap, none
+    case returnHome, retrySample, showOnMap, viewPower, none
 
     var label: LocalizedStringKey {
         switch self {
         case .returnHome: "Pulang ke jeti"
         case .retrySample: "Ulang sampel"
         case .showOnMap: "Lihat di peta"
+        case .viewPower: "Lihat tenaga"
         case .none: ""
         }
     }
