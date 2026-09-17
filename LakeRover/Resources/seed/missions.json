@@ -44,7 +44,14 @@
       "routeLengthM": 2000,
       "turbidityThresholdNTU": 18,
       "isDemoMission": false,
-      "autoStations": { "count": 6, "latitude": 5.05600, "longitude": 100.66300, "radiusM": 260 }
+      "stations": [
+        { "index": 0, "name": "Stesen 1", "zone": "Zon 1", "latitude": 4.99582, "longitude": 100.66099, "depthM": 3.0 },
+        { "index": 1, "name": "Stesen 2", "zone": "Zon 2", "latitude": 5.00365, "longitude": 100.67680, "depthM": 4.0 },
+        { "index": 2, "name": "Stesen 3", "zone": "Zon 3", "latitude": 5.03433, "longitude": 100.65386, "depthM": 5.0 },
+        { "index": 3, "name": "Stesen 4", "zone": "Zon 4", "latitude": 5.03354, "longitude": 100.66028, "depthM": 3.0 },
+        { "index": 4, "name": "Stesen 5", "zone": "Zon 5", "latitude": 5.04063, "longitude": 100.65783, "depthM": 4.0 },
+        { "index": 5, "name": "Stesen 6", "zone": "Zon 6", "latitude": 5.04257, "longitude": 100.67097, "depthM": 5.0 }
+      ]
     }
   ]
 }
