@@ -6,6 +6,9 @@ import SwiftUI
 /// icon, with the caption underneath. Putting the label inside the circle used to overflow it.
 struct MapControls: View {
     var stopped: Bool
+    /// `.vertical` in portrait. Landscape uses `.horizontal`, which drops the stack from about
+    /// 250 pt to ~75 pt and gives that height back to the station card below.
+    var axis: Axis = .vertical
     var onRecentre: () -> Void
     var onCamera: () -> Void
     var onStop: () -> Void
@@ -15,37 +18,43 @@ struct MapControls: View {
     private static let slotWidth: CGFloat = 72
 
     var body: some View {
-        VStack(spacing: 14) {
-            roundControl(
-                symbol: "scope",
-                caption: "Pusat",
-                fill: AnyShapeStyle(Material.regular),
-                foreground: .primary,
-                bordered: true,
-                action: onRecentre
-            )
-            .accessibilityLabel("Pusatkan peta pada misi")
-
-            roundControl(
-                symbol: "video.fill",
-                caption: "Kamera",
-                fill: AnyShapeStyle(Material.regular),
-                foreground: .primary,
-                bordered: true,
-                action: onCamera
-            )
-            .accessibilityLabel("Kamera langsung")
-
-            roundControl(
-                symbol: stopped ? "play.fill" : "stop.fill",
-                caption: stopped ? "Sambung" : "Berhenti",
-                fill: AnyShapeStyle(stopped ? Theme.success : Theme.critical),
-                foreground: .white,
-                bordered: false,
-                action: onStop
-            )
-            .accessibilityLabel(stopped ? "Sambung semula misi" : "Berhenti kecemasan")
+        if axis == .vertical {
+            VStack(spacing: 14) { controls }
+        } else {
+            HStack(alignment: .top, spacing: 14) { controls }
         }
+    }
+
+    @ViewBuilder private var controls: some View {
+        roundControl(
+            symbol: "scope",
+            caption: "Pusat",
+            fill: AnyShapeStyle(Material.regular),
+            foreground: .primary,
+            bordered: true,
+            action: onRecentre
+        )
+        .accessibilityLabel("Pusatkan peta pada misi")
+
+        roundControl(
+            symbol: "video.fill",
+            caption: "Kamera",
+            fill: AnyShapeStyle(Material.regular),
+            foreground: .primary,
+            bordered: true,
+            action: onCamera
+        )
+        .accessibilityLabel("Kamera langsung")
+
+        roundControl(
+            symbol: stopped ? "play.fill" : "stop.fill",
+            caption: stopped ? "Sambung" : "Berhenti",
+            fill: AnyShapeStyle(stopped ? Theme.success : Theme.critical),
+            foreground: .white,
+            bordered: false,
+            action: onStop
+        )
+        .accessibilityLabel(stopped ? "Sambung semula misi" : "Berhenti kecemasan")
     }
 
     private func roundControl(

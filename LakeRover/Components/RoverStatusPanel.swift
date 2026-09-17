@@ -10,6 +10,9 @@ struct RoverStatusPanel: View {
             Text("Status rover")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
+                // Never let the heading truncate to "Status rove…" if the column is squeezed.
+                .lineLimit(1)
+                .fixedSize(horizontal: true, vertical: false)
                 .padding(.bottom, 4)
 
             KeyValueRow("Kelajuan", String(format: "%.1f m/s", telemetry.speedMps))

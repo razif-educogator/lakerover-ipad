@@ -662,6 +662,9 @@
         }
       }
     },
+    "Kecilkan kad stesen" : {
+
+    },
     "Kedalaman" : {
       "localizations" : {
         "en" : {
@@ -716,6 +719,9 @@
           }
         }
       }
+    },
+    "Kembangkan kad stesen" : {
+
     },
     "Kepekatan tertinggi di %@ (%@). Kenal pasti sumber sisa plastik di zon itu dan ulang pensampelan selepas hujan." : {
       "localizations" : {
@@ -828,6 +834,9 @@
 
     },
     "Lapisan lalai" : {
+
+    },
+    "Lapisan peta" : {
 
     },
     "Lengkap" : {
@@ -1072,7 +1081,7 @@
     "Misi lalu" : {
 
     },
-    "Misi selesai — semua stesen telah disampel." : {
+    "Misi selesai" : {
 
     },
     "Mod" : {
@@ -1540,6 +1549,9 @@
 
     },
     "Semua stesen dalam had. Teruskan pemantauan dua minggu sekali." : {
+
+    },
+    "Semua stesen telah disampel." : {
 
     },
     "Sensor & kalibrasi" : {

@@ -8,6 +8,11 @@ struct LiveMapView: View {
     @State private var layer: MapLayer = .satellite
     @State private var follow = true
     @State private var confirmSkip = false
+    /// iPad reports `.regular` size classes in both orientations, so the aspect ratio is what
+    /// actually tells us we are in landscape.
+    @State private var isLandscape = false
+    /// Station card starts expanded; the presenter collapses it to show more map.
+    @State private var stationCardCollapsed = false
 
     /// Only used before a mission's stations are known — the real framing is computed from
     /// the station coordinates by `region(fitting:)`.
@@ -74,6 +79,11 @@ struct LiveMapView: View {
                 if mission == nil {
                     noMissionOverlay
                 }
+            }
+            .onGeometryChange(for: Bool.self) { proxy in
+                proxy.size.width > proxy.size.height
+            } action: { landscape in
+                isLandscape = landscape
             }
             .safeAreaInset(edge: .top, spacing: 0) { topOverlay }
             .safeAreaInset(edge: .bottom, spacing: 0) { bottomOverlay }
@@ -210,7 +220,7 @@ struct LiveMapView: View {
                 }
                 // Layer chips live in this column, not the top-right corner: that corner is
                 // owned by the floating Demo badge and the Tenaga / Tetapan icons.
-                LayerChips(layer: $layer)
+                LayerChips(layer: $layer, axis: isLandscape ? .horizontal : .vertical)
             }
             Spacer(minLength: 0)
         }
@@ -228,6 +238,7 @@ struct LiveMapView: View {
                 Spacer(minLength: 0)
                 MapControls(
                     stopped: telemetry.isStopped,
+                    axis: isLandscape ? .horizontal : .vertical,
                     onRecentre: { fitMission() },
                     onCamera: { env.router.sheet = .camera },
                     onStop: {
@@ -247,6 +258,7 @@ struct LiveMapView: View {
                 etaSeconds: telemetry.etaToStationS,
                 samplingInProgress: telemetry.sampling != nil,
                 isReturning: telemetry.isReturning,
+                isCollapsed: $stationCardCollapsed,
                 onDetails: {
                     if let id = currentStation?.id { env.router.sheet = .stationDetail(id) }
                 },
