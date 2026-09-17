@@ -3,6 +3,7 @@
     {
       "name": "Misi Pemantauan Tasik Cenderoh",
       "lakeName": "Tasik Cenderoh",
+      "roverName": "LakeRover-01",
       "dayOffset": 0,
       "state": "planned",
       "routeLengthM": 440,
@@ -20,6 +21,7 @@
     {
       "name": "Misi Kualiti Air Tasik Raban",
       "lakeName": "Tasik Raban",
+      "roverName": "LakeRover-02",
       "dayOffset": 6,
       "state": "planned",
       "routeLengthM": 3000,
@@ -39,6 +41,7 @@
     {
       "name": "Misi Sedimen Bukit Merah",
       "lakeName": "Tasik Bukit Merah",
+      "roverName": "LakeRover-03",
       "dayOffset": 13,
       "state": "draft",
       "routeLengthM": 2000,

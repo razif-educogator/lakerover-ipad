@@ -10,7 +10,7 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("Rover & sambungan") {
-                    KeyValueRow("Rover", settings.roverName)
+                    KeyValueRow("Rover", env.roverName)
                     KeyValueRow("Pautan", env.client.isDemo ? "Demo (disimulasikan)" : "4G")
                     KeyValueRow("Kelajuan simulasi", String(format: "%.0f×", env.client.speedMultiplier))
                     Stepper("Kelajuan demo") {

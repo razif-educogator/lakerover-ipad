@@ -154,7 +154,7 @@ struct LiveMapView: View {
             }
 
             if env.telemetry.hasData {
-                Annotation("LakeRover-01", coordinate: telemetry.coordinate) {
+                Annotation(env.roverName, coordinate: telemetry.coordinate) {
                     RoverAnnotationView(headingDeg: telemetry.headingDeg, moving: telemetry.isMoving)
                 }
             }
@@ -277,7 +277,7 @@ struct LiveMapView: View {
     // MARK: Camera
 
     private var titleText: String {
-        env.settings.roverName
+        env.roverName
     }
 
     private func recentreIfFollowing() {

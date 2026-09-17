@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct AboutView: View {
+    @Environment(AppEnvironment.self) private var env
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -14,7 +16,7 @@ struct AboutView: View {
                     Divider()
                     KeyValueRow("Pasukan", "MCKK Robotics")
                     Divider()
-                    KeyValueRow("Rover", "LakeRover-01")
+                    KeyValueRow("Rover", env.roverName)
                     Divider()
                     KeyValueRow("Model AR", RoverNotificationBridge.hasRealityFile ? "Rover.reality" : "Model sementara")
                 }

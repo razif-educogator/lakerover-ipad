@@ -90,7 +90,7 @@ struct SplashView: View {
         // Keep the attempt visible long enough to read, without the full 10 s timeout.
         try? await Task.sleep(for: .seconds(1.6))
         connection = found
-            ? .connected(name: env.settings.roverName, link: "4G", batteryPct: 78, satellites: 9)
+            ? .connected(name: env.roverName, link: "4G", batteryPct: 78, satellites: 9)
             : .notFound
     }
 }

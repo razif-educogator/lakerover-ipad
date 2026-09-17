@@ -60,6 +60,7 @@ enum SeedDataLoader {
             routeLengthM: dto.routeLengthM,
             turbidityThresholdNTU: dto.turbidityThresholdNTU
         )
+        mission.roverName = dto.roverName
         if mission.state == .completed {
             mission.startedAt = date
             mission.completedAt = date
@@ -149,6 +150,7 @@ private struct SeedFile: Decodable {
 private struct SeedMission: Decodable {
     var name: String
     var lakeName: String
+    var roverName: String?
     var dayOffset: Int
     var state: String
     var routeLengthM: Double

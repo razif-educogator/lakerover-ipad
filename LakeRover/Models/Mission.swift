@@ -10,6 +10,9 @@ final class Mission {
     var state: MissionState = MissionState.planned
     var routeLengthM: Double = 0
     var turbidityThresholdNTU: Double = 15
+    /// Rover unit assigned to this lake, e.g. "LakeRover-02". `nil` falls back to the unit
+    /// named in `AppSettings`.
+    var roverName: String?
     /// Set when the mission actually starts, used by Insights for "Misi ini".
     var startedAt: Date?
     var completedAt: Date?

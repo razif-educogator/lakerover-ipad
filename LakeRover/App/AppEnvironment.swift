@@ -32,6 +32,12 @@ final class AppEnvironment {
         return weather.summary(forLake: lakeName)
     }
 
+    /// The rover unit on duty: the active mission's assigned unit, falling back to the one
+    /// named in Tetapan. Every screen that shows a unit name reads this.
+    var roverName: String {
+        runtime.activeMission?.roverName ?? settings.roverName
+    }
+
     var client: any RoverClient
     var tagReader: any CartridgeTagReader = SimulatedTagReader()
     var settings: AppSettings

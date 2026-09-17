@@ -3,6 +3,7 @@
     {
       "name": "Misi Pemantauan Tasik Cenderoh (Julai)",
       "lakeName": "Tasik Cenderoh",
+      "roverName": "LakeRover-01",
       "dayOffset": -63,
       "state": "completed",
       "routeLengthM": 440,

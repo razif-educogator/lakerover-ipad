@@ -850,6 +850,9 @@
         }
       }
     },
+    "Lihat tenaga" : {
+
+    },
     "Live" : {
       "localizations" : {
         "en" : {
@@ -1379,6 +1382,9 @@
 
     },
     "Rover meneruskan misi walaupun pautan terputus" : {
+
+    },
+    "Rover menjejak semula laluan misi ke Jeti Utama." : {
 
     },
     "Rover tidak dijumpai" : {
