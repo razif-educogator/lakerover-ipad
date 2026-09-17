@@ -1,3 +1,4 @@
+import CoreLocation
 import SwiftUI
 
 /// "Seterusnya: Stesen S4 · Zon Selatan · 120 m · ETA 2 min" with Butiran / Langkau (R3.8).
@@ -25,6 +26,10 @@ struct NextStationCard: View {
                 Text(detailLine(for: station))
                     .font(.caption)
                     .foregroundStyle(.secondary)
+                Label(String(format: "%.5f, %.5f", station.coordinate.latitude, station.coordinate.longitude), systemImage: "mappin.and.ellipse")
+                    .font(.caption2.monospacedDigit())
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
                 HStack(spacing: 10) {
                     SecondaryButton("Butiran", action: onDetails)
                     SecondaryButton("Langkau", action: onSkip)

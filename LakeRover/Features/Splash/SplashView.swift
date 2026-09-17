@@ -53,7 +53,22 @@ struct SplashView: View {
             .padding(Theme.gutter * 1.5)
             .frame(maxWidth: 620)
         }
+        // A safe-area inset rather than an overlay: it reserves its own strip at the bottom,
+        // so it can never sit on top of the Mula button or the connection card.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            creditLine
+        }
         .task { await attemptConnection() }
+    }
+
+    private var creditLine: some View {
+        Text("Dibangunkan oleh Razif Razak menerusi Xcode")
+            .font(.subheadline.weight(.medium))
+            .foregroundStyle(.primary)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, Theme.gutter)
+            .padding(.bottom, Theme.gutter)
     }
 
     private var primaryTitle: LocalizedStringKey {

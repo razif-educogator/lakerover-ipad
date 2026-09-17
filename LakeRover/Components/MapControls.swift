@@ -1,42 +1,84 @@
 import SwiftUI
 
 /// Recentre, camera and the always-visible emergency stop (R3.6, R3.7).
+///
+/// All three are built from the same `roundControl`: a fixed-diameter circle holding only the
+/// icon, with the caption underneath. Putting the label inside the circle used to overflow it.
 struct MapControls: View {
     var stopped: Bool
     var onRecentre: () -> Void
     var onCamera: () -> Void
     var onStop: () -> Void
 
-    var body: some View {
-        VStack(spacing: 10) {
-            circleButton(symbol: "scope", action: onRecentre)
-                .accessibilityLabel("Pusatkan pada rover")
-            circleButton(symbol: "video.fill", action: onCamera)
-                .accessibilityLabel("Kamera langsung")
+    /// Shared metrics so the three controls line up on one column.
+    private static let diameter: CGFloat = 52
+    private static let slotWidth: CGFloat = 72
 
-            Button(action: onStop) {
-                VStack(spacing: 2) {
-                    Image(systemName: stopped ? "play.fill" : "stop.fill")
-                        .font(.title3.weight(.bold))
-                    Text(stopped ? "Sambung" : "Berhenti")
-                        .font(.caption2.weight(.bold))
-                }
-                .frame(width: 56, height: 56)
-                .background(stopped ? Theme.success : Theme.critical, in: Circle())
-                .foregroundStyle(.white)
-                .shadow(radius: 4, y: 2)
-            }
-            .buttonStyle(.plain)
+    var body: some View {
+        VStack(spacing: 14) {
+            roundControl(
+                symbol: "scope",
+                caption: "Pusat",
+                fill: AnyShapeStyle(Material.regular),
+                foreground: .primary,
+                bordered: true,
+                action: onRecentre
+            )
+            .accessibilityLabel("Pusatkan peta pada misi")
+
+            roundControl(
+                symbol: "video.fill",
+                caption: "Kamera",
+                fill: AnyShapeStyle(Material.regular),
+                foreground: .primary,
+                bordered: true,
+                action: onCamera
+            )
+            .accessibilityLabel("Kamera langsung")
+
+            roundControl(
+                symbol: stopped ? "play.fill" : "stop.fill",
+                caption: stopped ? "Sambung" : "Berhenti",
+                fill: AnyShapeStyle(stopped ? Theme.success : Theme.critical),
+                foreground: .white,
+                bordered: false,
+                action: onStop
+            )
+            .accessibilityLabel(stopped ? "Sambung semula misi" : "Berhenti kecemasan")
         }
     }
 
-    private func circleButton(symbol: String, action: @escaping () -> Void) -> some View {
+    private func roundControl(
+        symbol: String,
+        caption: LocalizedStringKey,
+        fill: AnyShapeStyle,
+        foreground: Color,
+        bordered: Bool,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
-            Image(systemName: symbol)
-                .font(.body.weight(.semibold))
-                .frame(width: 44, height: 44)
-                .background(.regularMaterial, in: Circle())
-                .overlay(Circle().strokeBorder(Theme.hairline, lineWidth: 1))
+            VStack(spacing: 5) {
+                Image(systemName: symbol)
+                    .font(.body.weight(.semibold))
+                    .foregroundStyle(foreground)
+                    .frame(width: Self.diameter, height: Self.diameter)
+                    .background(fill, in: Circle())
+                    .overlay {
+                        if bordered {
+                            Circle().strokeBorder(Theme.hairline, lineWidth: 1)
+                        }
+                    }
+                    .shadow(radius: 4, y: 2)
+
+                Text(caption)
+                    .font(.caption2.weight(.semibold))
+                    .lineLimit(1)
+                    .fixedSize()
+                    .padding(.horizontal, 7)
+                    .padding(.vertical, 2)
+                    .background(.regularMaterial, in: Capsule())
+            }
+            .frame(width: Self.slotWidth)
         }
         .buttonStyle(.plain)
     }

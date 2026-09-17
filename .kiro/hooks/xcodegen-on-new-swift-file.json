@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "XcodeGen on new Swift file",
+      "trigger": "PostFileCreate",
+      "description": "Regenerates LakeRover.xcodeproj whenever a new Swift file is created, so it is added to the compile-sources phase. Without this, new files exist on disk but are not in the target and fail with \"Cannot find X in scope\".",
+      "matcher": "\\.swift$",
+      "action": {
+        "type": "command",
+        "command": "/opt/homebrew/bin/xcodegen generate --spec /Users/itc/Downloads/educogator/lakerover/project.yml --project /Users/itc/Downloads/educogator/lakerover --use-cache --quiet",
+        "timeout": 60
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import CoreLocation
 import SwiftUI
 
 /// The "Status rover" card on the Live map (R3.3).
@@ -33,6 +34,22 @@ struct RoverStatusPanel: View {
                 .fontWeight(.medium)
             }
             .font(.subheadline)
+            .padding(.vertical, 7)
+
+            Divider()
+            // Stacked rather than side by side: the pair does not fit the panel width on one
+            // line. Monospaced digits stop it jittering as the rover moves.
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Koordinat")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                Text(String(format: "%.5f, %.5f", telemetry.coordinate.latitude, telemetry.coordinate.longitude))
+                    .font(.footnote.weight(.medium))
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 7)
         }
         .frame(width: 190)

@@ -14,23 +14,23 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: tab) {
             LiveMapView()
-                .tabItem { Label(MainTab.live.title, systemImage: MainTab.live.symbol) }
+                .tabItem { tabLabel(.live) }
                 .tag(MainTab.live)
 
             MissionTabRoot()
-                .tabItem { Label(MainTab.misi.title, systemImage: MainTab.misi.symbol) }
+                .tabItem { tabLabel(.misi) }
                 .tag(MainTab.misi)
 
             SamplesView()
-                .tabItem { Label(MainTab.sampel.title, systemImage: MainTab.sampel.symbol) }
+                .tabItem { tabLabel(.sampel) }
                 .tag(MainTab.sampel)
 
             InsightsView()
-                .tabItem { Label(MainTab.data.title, systemImage: MainTab.data.symbol) }
+                .tabItem { tabLabel(.data) }
                 .tag(MainTab.data)
 
             AlertsView()
-                .tabItem { Label(MainTab.amaran.title, systemImage: MainTab.amaran.symbol) }
+                .tabItem { tabLabel(.amaran) }
                 .badge(env.unreadAlertCount)
                 .tag(MainTab.amaran)
         }
@@ -48,6 +48,20 @@ struct MainTabView: View {
             case .stationDetail(let id):
                 StationDetailView(stationID: id)
             }
+        }
+    }
+}
+
+/// Tab labels must never wrap — "Live" was breaking to "Liv/e" in the iPad top tab bar.
+/// `fixedSize` keeps each label at its natural width instead of letting the bar compress it.
+private extension MainTabView {
+    func tabLabel(_ tab: MainTab) -> some View {
+        Label {
+            Text(tab.title)
+                .lineLimit(1)
+                .fixedSize(horizontal: true, vertical: false)
+        } icon: {
+            Image(systemName: tab.symbol)
         }
     }
 }
